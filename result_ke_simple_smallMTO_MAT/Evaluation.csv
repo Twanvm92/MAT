@@ -1,0 +1,2 @@
+TP, FN, FP, TN, P    , R    , F1   , ER   , RI
+0, 1, 1, 65, 0.000, 0.000, NaN, -Infinity, -1.000

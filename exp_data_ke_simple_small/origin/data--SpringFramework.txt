@@ -1,0 +1,68 @@
+//  given a class with a non-void returning setter method 
+//  Destination argument being null is ok for a producer 
+//  same as java.sql.Connection.TRANSACTION_SERIALIZABLE; 
+//  instance @Bean methods within @Configuration classes must be overridable to accommodate CGLIB 
+/*  (non-Javadoc)	 * @see org.springframework.beans.factory.BeanNameAware#setBeanName(java.lang.String)	  */
+//  Close and stop the listeners 
+//  a single resource with the given name 
+//  recurse 
+//  Try various advice types 
+//  instruction as a successor of the current block, and to start a new basic block. 
+//  Verifying that after a number of compilations, the classloaders   used to load the compiled expressions are discarded/replaced.   See SpelCompiler.loadClass() 
+//  Update response 
+//  Now fast-forward by 31 minutes 
+//  Add user to local registry 
+//  Re-retrieve the array from the synthesized annotation 
+//  See SPR-7000 
+//  skip a 
+//  useful for profiling to take snapshots   System.in.read(); 
+//  SPR-8561 
+//  Not necessary to cast if the target & bridge have   the same return type.   (This conveniently includes void and primitive types,   which would fail if casted.  It's not possible to   covariant from boxed to unbox (or vice versa), so no having   to box/unbox for bridges).   TODO: It also isn't necessary to checkcast if the return is   assignable from the target.  (This would happen if a subclass   used covariant returns to narrow the return type within a bridge
+//  against the Lockable interface introduced by the specific advisor 
+//  SPR-14435 
+//  Verify the result 
+//  the default: same value as pubSubDomain 
+//  NOTE: the two DataSource instances are NOT the same! 
+//  Skip the index field (2 bytes). 
+//  Fetch UOWManager handle from JNDI, if necessary. 
+//  last comment not closed properly 
+//  Physically close durable subscribers at time of Session close call. 
+//  SPR-13319 
+//  Is the test class annotated with @TestConstructor?
+//  use 4 and 2 bytes respectively. 
+//  may be null 
+//  Common cases 
+//  Publish shutdown event. 
+//  Verifying 
+//  Simply proceed, no equivalent superclass constructor found... 
+//  SPR-14718, SPR-7598 
+//  "offset_delta + 1" rule in all cases. 
+//  Check to see if an MBeanServer is registered. 
+//  Check nested map in list 
+//  A specific theme indicated, or do we need to fallback to the default?
+//  SPR-6268 
+//  If we get here, otherProxy is the other AopProxy. 
+//  We have been able to determine the arg names. 
+//  Invoke method on target Connection. 
+//  doSuspend failed - original transaction is still active... 
+//  JDK dynamic proxy 
+//  contributed by ConfigForScanning 
+//  Save the first exception but invoke all interceptors 
+//  Try to connect using client. 
+//  - Whether the stack map frames are compressed (i.e. in a StackMapTable) or not. 
+//  Constants to manipulate the DIM field of an abstract type. 
+//  nothing below trace 
+//  ignore, see SPR-13620 
+//  Multicast right now if possible - or lazily once the multicaster is initialized 
+// ---------------------------------------------------------------------------------------   Convenience methods for sending messages to and receiving the reply from a destination  --------------------------------------------------------------------------------------- 
+//  Match all elements up to the first ** 
+//  Unless it was invalidated 
+//  Proceed to physical close from here... 
+//  Now msg better be as expected 
+//  and won't think it's equal to B's NopInterceptor 
+//  do something nice for arrays 
+//  It would be nice to partially match a path and get any bound variables in one step 
+//  Need lifecycle methods 
+// SPR-12372 & SPR-13455 
+//  Start of the most recent path element in a particular path element 
+//  Fires context checks 

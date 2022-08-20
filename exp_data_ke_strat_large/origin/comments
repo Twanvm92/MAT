@@ -1,0 +1,1831 @@
+//  TODO could do with more refactoring around argument handling and varargs 
+//  TODO: publisherToMono/CompletableFuture vs Single (ISE on multiple elements)? 
+//  for now just make a new array; TODO: optimize 
+//  The above result is likely to be incomplete, i.e. only containing file system references.   We need to have pointers to each of the jar files on the classpath as well... 
+//  one error (should not include delimiter) 
+//  TODO this seems rather bogus, should we eagerly show an error? 
+//  We don't trust the JMS provider: It might throw RuntimeException or Error. 
+//  Remove corresponding bean from singleton cache, if any. Shouldn't usually   be necessary, rather just meant for overriding a context's default beans 
+//  1 will make it throw a RuntimeException - SpEL will let this through 
+//  TODO is this caching safe - passing the expression around will mean this executor is also being passed around 
+/* 	 * Further TODO for compilation:	 *	 * - OpMinus with a single literal operand could be treated as a negative literal. Will save a	 *   pointless loading of 0 and then a subtract instruction in code gen.	 * - allow other accessors/resolvers to participate in compilation and create their own code	 * - A TypeReference followed by (what ends up as) a static method invocation can really skip	 *   code gen for the TypeReference since once that is used to locate the method it is not	 *   used again.	 * - The opEq implementation is quite basic. It will compare numbers of the same type (allowing	 *   them to be their boxed or unboxed variants) or compare object references. It does not	 *   compile expressions where numbers are of different types or when objects implement	 *   Comparable.     *	 * Compiled nodes:	 *	 * TypeReference	 * OperatorInstanceOf	 * StringLiteral	 * NullLiteral	 * RealLiteral	 * IntLiteral	 * LongLiteral	 * BooleanLiteral	 * FloatLiteral	 * OpOr	 * OpAnd	 * OperatorNot	 * Ternary	 * Elvis	 * VariableReference	 * OpLt	 * OpLe	 * OpGt	 * OpGe	 * OpEq	 * OpNe	 * OpPlus	 * OpMinus	 * OpMultiply	 * OpDivide	 * MethodReference	 * PropertyOrFieldReference	 * Indexer	 * CompoundExpression	 * ConstructorReference	 * FunctionReference	 * InlineList	 * OpModulus	 *	 * Not yet compiled (some may never need to be):	 * Assign	 * BeanReference	 * Identifier	 * OpDec	 * OpBetween	 * OpMatches	 * OpPower	 * OpInc	 * Projection	 * QualifiedId	 * Selection	  */
+//  This is a hack to be able to get the generated key from a database that doesn't support   get generated keys feature. HSQL is one, PostgreSQL is another. Postgres uses a RETURNING   clause while HSQL uses a second query that has to be executed with the same connection. 
+//  ---- workaround ----
+/*  * Tests for pooling invoker interceptor. * TODO: need to make these tests stronger: it's hard to * make too many assumptions about a pool. * * @author Rod Johnson * @author Rob Harrop * @author Chris Beams * @author Stephane Nicoll  */
+//  this test is a bit fragile, but gets the job done, proving that an   attempt was made to look up the AJ aspect. It's due to classpath issues   in .integration-tests that it's not found.
+//  TODO: refactor in AbstractBeanFactory (tests for AbstractBeanFactory) 
+/* 	 * SPR-6038: detect HSQL and stop illegal locks being taken.	 * TODO: Against Quartz 2.2, this test's job doesn't actually execute anymore...	  */
+//  TODO correct end position?
+//  TODO Do we need special handling when patterns contain multiple dots? 
+//  TODO -- this fails with NPE due to ArrayToObject converter - discuss with Andy  setValueExpectError("arrayContainer.doubles[1]", new ArrayList<String>());  setValueExpectError("arrayContainer.shorts[1]", new ArrayList<String>()); 
+//  It would be nice to partially match a path and get any bound variables in one step 
+// FIXME inline? 
+//  TODO: change to ByteBufferFeeder when supported by Jackson   See https://github.com/FasterXML/jackson-core/issues/478
+//  Extract key from attribute or sub-element. 
+//  No corresponding field on the target class... 
+//  Create alias 
+//  Find the current raw value, by invoking the corresponding setter 
+//  No client side HttpCookie support yet 
+//  SPR-13658 
+//  Will do JNDI lookup to get home but won't call create 
+//  And, not expressions 
+//  reset the flag back 
+//  Commit session or acknowledge message. 
+//  Data flow algorithm: put the first basic block in a list of blocks to process (i.e. blocks   whose input stack size has changed) and, while there are blocks to process, remove one   from the list, update the input stack size of its successor blocks in the control flow 
+//  This trigger has to be somewhere in between 2am and 3am 
+//  Let's try whether we're in a JTA transaction. 
+//  Checks that the custom keyGenerator was used 
+//  varargs char 
+//  Mark override as not overloaded, to avoid the overhead of arg type checking. 
+//  Now copy both the callbacks from mainCallbacks 
+//  Can't assert it's equal to 4 as the pointcut may be optimized and only invoked once 
+//  Parse the array_value array. 
+//  Use request scope to expose nestedPath to included pages too. 
+//  Count all advice, including explicit registrations.. 
+/* 		public int return5() {			return 5;		}		 */
+//  else, let EmbeddedDatabaseFactory use the default "testdb" name 
+//  rely on default setting of resourceRef=false, no auto addition of java:/comp/env prefix 
+//  RequestPredicates.Visitor 
+//  ignore WebServiceException as probably setup issue with JAX-WS provider vs JAXB 
+//  Only setter fired 
+//  What's a reasonable expectation for _any_ server or developer machine load?   3 seconds?
+//  We're checking nested generic variables now... 
+//  Clear remaining scheduled invokers, possibly left over as paused tasks 
+//  Preferred option: JDK 9+ Lookup.defineClass API if ClassLoader matches 
+//  Wrap executor with an unconfigurable decorator. 
+// 3
+/*  all tests are in the parent class.  */
+//  If we get here, we need to process an existing result object immediately.   The decision is made within the result lock; just the handle call outside 
+//  At this point we know we're streaming.. 
+//  Make invocation available if necessary. 
+//  Any other reactive type, typically a Flux 
+//  should have been autowired 
+//  Should not happen since placeholders are checked earlier. 
+//  give up trying to compile it when it just doesn't seem to be possible. 
+//  Make sure body is consumed to avoid leak reports 
+//  Probably a pre-bound resource... 
+//  the factory is a prototype - ask for multiple instances 
+//  Fallback: setString or setNString binding 
+//  Generate a StackMap attribute entry, which are always uncompressed. 
+//  Expose this tag's status object as PageContext attribute, 
+//  if the introduced method throws an exception. 
+//  Expired on retrieve or while processing request, or invalidated.. 
+//  Purge empty entries on access since we don't have a clean-up thread or the like. 
+//  check we can find the ctor ok 
+//  Are we using generated key columns 
+/*  expected  */
+//  currently deliberate 
+//  If srcType has the same array dimension and the same kind as dstType. 
+//  First, invoke the BeanDefinitionRegistryPostProcessors that implement PriorityOrdered. 
+//  Can't do exact matching through isMatch 
+//  A reference to the id of another bean in a parent context. 
+//  parameter 
+//  Try custom converter... 
+//  SPR-8917 
+//  Transacted session created by this container -> commit. 
+//  double 
+//  we return null rather than throw an exception so that we behave well   in a chain-of-responsibility. 
+//  inline map creation not supported at the moment   evaluate("#{'a':'y','b':'n','c':'y'}.![value=='y'?key:null].nonnull().sort()", "[a, c]", ArrayList.class); 
+//  Match 
+//  Check the EhCache cache again (in case the cache was added at runtime) 
+//  UserTransaction has already been obtained from JNDI, so the   TransactionSynchronizationRegistry probably sits there as well. 
+//  We need to wrap the MetadataAwareAspectInstanceFactory with a decorator   so that it will only instantiate once. 
+//  should throw CNFE when trying to load AnnotationTransactionAspect.   Do you actually have org.springframework.aspects on the classpath? 
+//  tm has no synch enabled (used at outer level), tm2 has synch enabled (inner level) 
+//  or using assignment within the expression 
+//  These fail prior to fixing SPR-10546 
+//  Cannot modify startup-time collection elements anymore (for stable iteration) 
+//  (implicit) stack map frame, if needed. 
+//  Send error while item cached 
+//  SPR-12501 
+//  Add all the Spring advisors found according to superclass rules. 
+//  the EM w/o properties will be created 
+//  SPR-13975 
+//  Remove resolved singleton classes from cache 
+//  faking no message received 
+//  Equal values are equal 
+//  statements can add attribute names to the constant pool, thereby changing its size! 
+//  Equality checks were handled by the proxy 
+//  SPR-12149 
+//  Multi-purpose return value types 
+//  A RuntimeException: will lead to a rollback. 
+//  Validate nested type structure 
+//  This is used for Groovy. It's a bean reference to a customizer bean. 
+//  SPR-10825 
+//  If we get here, we need to create a MethodInvocation. 
+//  Extract value from attribute or sub-element. 
+//  Assign a generated name?
+//  - make sure the two instances share the same Frame instance (the implementation of   {@link Label#getCanonicalInstance} relies on this property; here label.frame should be 
+//  3.4L - not allowed 
+//  We have a given MessageSourceResolvable. 
+//  const_value_index, CONSTANT_Double   const_value_index, CONSTANT_Float   const_value_index, CONSTANT_Integer   const_value_index, CONSTANT_Long 
+//  Now there may or may not be an exponent 
+//  SPR-14792 
+//  Adapt to TransactionAspectSupport's invokeWithinTransaction... 
+//  @Order is not @Inherited 
+//  gh-22655 
+//  assertTrue(multiPackageBeanCount > singlePackageBeanCount); 
+//  Case of an array type, we need to build its descriptor first.   SPRING PATCH: larger initial size 
+//  Set computed HTTP 1.1 Cache-Control header 
+//  testing on Unix 
+//  Check nested list in list 
+// ---------------------------------------------------------------------   Convenience methods for content-based equality/hash-code handling  --------------------------------------------------------------------- 0
+//  SPR-13693 
+//  Quick check for existing entry on ConcurrentHashMap... 
+/* 		 * The nth entry contains the slot index of the LVT table entry holding the		 * argument name for the nth parameter.		  */
+//  -----------------------------------------------------------------------------------------------   Frame merging methods, used in the second step of the stack map frame computation algorithm   ----------------------------------------------------------------------------------------------- 
+//  Try default variable resolution 
+//  register the final advisor 
+//  no more ${expressions} found in string, add rest as static text 
+//  No JTA TransactionManager available - log a warning. 
+//  Force static initializers to run. 
+//  OK, so we need an EntityManagerFactory... 
+//  -- AND -- 
+//  Request configuration not set in the context 
+// ---------------------------------------------------------------------   Implementation of JDBC 4.1's getParentLogger method  --------------------------------------------------------------------- 
+//  Check that 'ref' and 'method' are specified 
+//  clear first, session may be unresponsive 
+//  If no cache name given, use bean name as cache name. 
+//  SPR-16231 
+//  test property set (tb.name) 
+//  Clean up the client if we created it in the constructor 
+// ---------------------------------------------------------------------   Implementation of ConfigurableBeanFactory interface  --------------------------------------------------------------------- 
+//  same as java.sql.Connection.TRANSACTION_SERIALIZABLE; 
+//  Fall through to loadable check below 
+//  AbstractDataBufferAllocatingTests.leakDetector will verify the buffer's release 
+//  Different parts of elvis expression are null 
+//  Add our local Advisor to the existing proxy's Advisor chain... 
+//  Process any early evictions 
+//  Convert Collection elements. 
+//  Allow for custom post-processing before we actually build the ValidatorFactory. 
+//  consistent with WebMvcConfigurationSupport 
+//  Fulfill all the parameter requirements except the last one 
+//  Remove header if available 
+//  [handlerStart,handlerEnd[ - [rangeStart,rangeEnd[ = [handlerStart,rangeStart[ 
+// ---------------------------------------------------------------------   Implementation of FactoryBean interface  --------------------------------------------------------------------- 
+//  All the methods in this class use the advised() template method   to obtain a transaction object, configured with the given PlatformTransactionManager   and transaction attribute source 
+//  Ignore, after send failure 
+//  Copy and reset the nextAttribute field so that it can also be used in FieldWriter. 
+//  are guaranteed to bind in exactly the same way. 
+//  If only one of the advisor (but not both) is PointcutAdvisor, then it is a mismatch.   Takes care of the situations where an IntroductionAdvisor is used (see SPR-3959). 
+//  Method predicates 
+//  Not feasible to count bytes on potentially streaming response.   RFC 7302 allows HEAD without content-length. 
+//  Set up infrastructure. 
+//  skip to root 
+//  Create child ApplicationContext for views. 
+//  This next call was failing because the isCompilable check in Indexer   did not check on the key being compilable (and also generateCode in the   Indexer was missing the optimization that it didn't need necessarily   need to call generateCode for that accessor) 
+//  Guarantee initialization of beans that the inner bean depends on. 
+//  and rename this class 
+//  RealLiteral 
+//  all need converting to strings 
+//  Pass through IllegalStateException when coming from FileItem directly,   or propagate an exception from I/O operations within FileItem.write 
+//  WebSocketHandler implementation 
+//  Clean up the EventLoopGroup if we created it in the constructor 
+//  updated after each stack_map_frame is read. 
+//  "normal" case 
+//  Search for further keys to strip, with the first key stripped. 
+//  depending on the configured hierarchy mode.s 
+//  Default connection timeout merged 
+// -------------------   SPR-2603 classes  ------------------- 
+//  Equality amongst standard annotations 
+//  name attribute is not supported by <label/> 
+//  double slot left operand - should get boxed, return false 
+//  Need to search for EntityManagerFactory beans. 
+//  Custom return value types 
+// ---------------------------------------------------------------------   Management of default editors  --------------------------------------------------------------------- 
+//  By construction, the first outgoing edge of a basic block that ends with a jsr   instruction leads to the jsr continuation block, i.e. where execution continues   when ret is called (see {@link #FLAG_SUBROUTINE_CALLER}). 
+//  Finally, invoke all other BeanFactoryPostProcessors. 
+//  session 
+//  SPR-6923 
+//  Special case when the key is an unquoted string literal that will be parsed as   a property/field reference 
+//  Initialize conversion service for this context. 
+//  Invoke BeanDefinitionRegistryPostProcessors first, if any. 
+//  Regular case: straight bean instance, with BeanFactory available. 
+//  shouldn't happen - if it does, proceed with requestUri as-is 
+//  uninitialized to let the bean factory post-processors apply to them! 
+//  If we have another kind of PersistenceException, throw it. 
+//  Special handling for this, target, @this, @target, @annotation   in Spring - we can optimize since we know we have exactly this class,   and there will never be matching subclass at runtime. 
+//  Won't be advised 
+//  The following can also be used to directly access the   environment instead of relying on placeholder replacement.   @Value("#{ environment['enigma'] }") 
+//  - The offset of the RuntimeInvisibleParameterAnnotations attribute, or 0. 
+//  looking for the first extension 
+//  Peek into the file to look for DOCTYPE. 
+//  The target bean should be ignored in favor of the scoped proxy. 
+//  Service locator for a bean type 
+//  --- dotted property names 
+//  TODO AopUtils.invokeJoinpointUsingReflection 
+//  Not streaming... 
+// ---------------------------------------------------------------------   Flushing support  --------------------------------------------------------------------- 
+//  wait until stop is called 
+//  Can also obtain the mixin (this) this way  Lockable mixin = (Lockable) jp.getThis(); 
+//  SPR-14939 
+//  should pass 
+//  SPR-13727 
+//  Create a new collection or map ready for the indexer 
+//  - The end offset of the StackMap[Table] attribute, or 0. 
+//  Add parameters to output content type 
+//  Access flags values, defined in   - https://docs.oracle.com/javase/specs/jvms/se9/html/jvms-4.html#jvms-4.1-200-E.1   - https://docs.oracle.com/javase/specs/jvms/se9/html/jvms-4.html#jvms-4.5-200-A.1   - https://docs.oracle.com/javase/specs/jvms/se9/html/jvms-4.html#jvms-4.6-200-A.1   - https://docs.oracle.com/javase/specs/jvms/se9/html/jvms-4.html#jvms-4.7.25 
+//  now try to execute the tag outside a bindtag, but inside a messageTag 
+//  classes. 
+//  shuffle & sort 10 times 
+//  not used in the response 
+//  This may not be all the URI variables, supply what we have so far.. 
+//  number types are not the same 
+//  Intentionally missing:   @AliasFor("location") 
+//  AST: 
+//  no session yet 
+//  Third request: expired session, new session created 
+//  Fall back... 
+//  no destination 
+//  Create a fresh workbook instance for this render step. 
+//  jackson-datatype-jsr310 not available 
+//  Could actually try to figure out interface from create?
+//  An unresolvable bean type, probably from a lazy bean - let's ignore it. 
+//  should handle Customer (exact match) 
+//  SPR-11326 
+//  left up to the caller to convert the value if necessary. 
+//  First, register the BeanPostProcessors that implement PriorityOrdered. 
+//  Verify contracts between utility methods: 
+//  Check whether current file size is different than original one. 
+//  Should not have invoked constructor for the proxy instance 
+//  Write method's property type potentially more specific 
+//  relative to the input stack size, which is not known yet). 
+//  Query should not succeed since parameter declaration did not specify parameter name 
+//  Hibernate 5.2's createQuery method declares a new subtype as return type,   so we need to use reflection for binary compatibility with 5.0/5.1 here. 
+//  attempt to retrieve a bean that does not exist 
+//  Check registered HandlerExceptionResolvers... 
+//  If all factory methods have the same return type, return that type. 
+//  Unresolved type variable, potentially nested -> never insist on exact match 
+//  Determine init method and destroy method. 
+//  Existing transaction found -> check propagation behavior to find out how to behave. 
+//  No longer counting 
+//  SPR-12198: mySource should 'win' as it was registered manually 
+//  Wait for all tasks to terminate - works for the common pool as well. 
+//  So we match in number... 
+//  bean exists 
+//  here: RIGHT!=null LEFT==unknown 
+//  Constructor invocation 
+//  Couldn't determine resource URL - return null to indicate   that there is no appropriate text representation. 
+//  We have exactly one match. 
+//  worth a closer look 
+//  No URL (or no resolvable URL) -> try relative to resource base. 
+//  Create a ResourceBundleMessageSource for the specified resource bundle   basename in the JSTL context-param in web.xml, wiring it with the given   Spring-defined MessageSource as parent. 
+//  collection processors 
+//  Indicate that no message has been received. 
+//  Null old pattern: should ignore 
+//  New Session to be bound for the current method's scope... 
+//  close and stop the listeners 
+//  Handle prototypes correctly... 
+//  Deal with the arguments up to 'expected number' - 1 (that is everything but the varargs argument) 
+//  It's an all in one... get the text between the first (and the last) 
+//  Information about the current type annotation target, i.e. the one read in the current   (or latest) call to {@link ClassReader#readAnnotationTarget()}. 
+//  Cancel associated user-level Future handle as well 
+//  Data truncation   No data found   Value out of range   Integrity constraint violation   Triggered data change violation   With check violation 
+//  SPR-16414 
+//  This is identical to the requiredSingleResult implementation but differs in the   semantics of the incoming Collection (which we currently can't formally express) 
+//  Allow for caching all bean definition metadata, not expecting further changes. 
+//  no box needed 
+//  Sanity check, this particular call has *not* called the service 
+//  Create the CacheOperationSource definition. 
+//  make the scope create a new object .. again 
+//  no parent 
+//  Exclude pointcuts 
+//  Check for file with language, country and variant localization. 
+//  something transactional 
+//  Method with string return 
+//  Target Connection already held -> return it. 
+//  Check that we're not parsing our own bean definition,   to avoid failing on unresolvable placeholders in properties file locations. 
+//  A custom namespace, not to be handled by Spring - maybe "xml:...". 
+//  Is the stream closed?
+//  SPR-16091 
+//  Based purely on number of captures 
+//  throw these two exceptions, besides PersistenceException. 
+//  The index in the byte[] found at buffers.getLast() to be written next 
+//  add bar property -> validation should pass, even with an empty string value 
+//  Add rest of String, but not in case of empty input. 
+//  Else: different class with same name found 
+//  If no attribute is returned, we know that it is not defined in the   management interface. 
+//  stack as opposed to prior to the recursive call). 
+//  Handle close method: only close if not within a transaction. 
+//  Check socket factories for RMI registry. 
+//  If the method descriptor has changed, with more locals than the max_locals field of the   original Code attribute, if any, then the original method attributes can't be copied. A   conservative check on the descriptor changes alone ensures this (being more precise is not   worth the additional complexity, because these cases should be rare -- if a transform changes   a method descriptor, most of the time it needs to change the method's code too). 
+//  could also get column names 
+// -----------------------------------------------------------------------------------   Hook for exception translation (used by JpaTransactionManager)  ----------------------------------------------------------------------------------- 
+//  Visit the Module, ModulePackages and ModuleMainClass attributes. 
+//  Typically a MalformedURLException or AccessControlException. 
+//  SPR-9657, SPR-11504 
+//  assert that the property source was added last to the set of sources 
+//  p1 should 'win' as it was registered last 
+//  SPR-9098 
+// 		StaticApplicationContext ctx = new StaticApplicationContext();  		ctx.registerPrototype("testService1", TestService.class, new MutablePropertyValues());  		ctx.registerPrototype("testService2", ExtendedTestService.class, new MutablePropertyValues());  		MutablePropertyValues mpv = new MutablePropertyValues();  		mpv.addPropertyValue("serviceLocatorInterface", TestServiceLocator3.class);  		mpv.addPropertyValue("serviceMappings", "=testService1\n1=testService1\n2=testService2");  		ctx.registerSingleton("factory", ServiceLocatorFactoryBean.class, mpv);  		ctx.refresh(); 
+//  Case of a backward jump with an offset < -32768. In this case we automatically replace GOTO   with GOTO_W, JSR with JSR_W and IFxxx <l> with IFNOTxxx <L> GOTO_W <l> L:..., where   IFNOTxxx is the "opposite" opcode of IFxxx (e.g. IFNE for IFEQ) and where <L> designates   the instruction just after the GOTO_W. 
+//  '?'   '? extends number' 
+//  Retrieve and parse cookie value. 
+//  DontCheck(AbbreviationAsWordInName): can't be renamed (for backward binary compatibility). 
+//  factory method syntax 
+//  Create service locator proxy. 
+//  optional .SecondMsg blah = 2; 
+//  Number of times to interpret an expression before compiling it 
+//  Path is exhausted, only match if rest of pattern is * or **'s 
+//  SPR-16710 
+//  Check to see if CachedIntrospectionResults is delegating to ExtendedBeanInfo as expected 
+//  Already an RMI object bound for the specified service name... 
+//  Enforce namespace aware for XSD... 
+//  Non-empty payload 
+//  gh-23297 
+//  Recursive invocation, parsing placeholders contained in the placeholder key. 
+//  Fallback is to return an empty SQLErrorCodes instance. 
+//  ensure some send time elapses 
+//  referenced as #a in the expression   so non-qualified references 'hasRole()' 'hasIpAddress()' are invoked against it 
+//  public for Kotlin 
+//  variant with non-standard write method 
+//  copy autowire settings from original bean definition. 
+//  doesn't make much sense in the context of a list... 
+//  @Disabled("ControllerClassNameHandlerMapping") 
+//  No-op 
+//  Could be part of normal workflow (e.g. browser tab closed) 
+//  Exercise the comparator invocation code that runs in   equalityCheck() (called from interpreted and compiled code) 
+//  Handler method detection 
+//  SPR-12735 
+//  Check for SessionFactory's DataSource. 
+//  Fail if we're already creating this bean instance:   We're assumably within a circular reference. 
+//  Required so that all BeanPostProcessors, Scopes, etc become available. 
+//  Invoke method on target Session. 
+//  Use the Pointcuts matches method 
+// ---------------------------------------------------------------------------------------   Convenience methods for sending messages to and receiving the reply from a destination  --------------------------------------------------------------------------------------- 
+//  Cache debug flag to avoid repeated checks. 
+//  No property-specific editor -> check type-specific editor. 
+//  be ignored. 
+// -------------------------------------------------------------------------   Template methods for listener execution  ------------------------------------------------------------------------- 
+//  Implemented interfaces probably expose conflicting method signatures...   Proceed with original target method. 
+//  Otherwise, no local settings to be applied via StdSchedulerFactory.initialize(Properties) 
+//  Content phase 
+//  Avoid Validator invocation on FactoryBean.getObjectType/isSingleton 
+// ---------------------------------------------------------------------------------------   Convenience methods for receiving messages  --------------------------------------------------------------------------------------- 
+//  Ensure that we exclude 
+//  Common return type found: all factory methods return same type. For a non-parameterized 
+//  T <= ? super T 
+//  Only literal (encode full source).. 
+//  should not throw NSBDE 
+//  Additional candidate with same length 
+//  Fallback: Original JavaBeans introspection might not have found matching setter   method due to lack of bridge method resolution, in case of the getter using a   covariant return type whereas the setter is defined for the concrete property type. 
+//  Simple key/value pairs 
+//  SPR-16587 
+//  Use ObjectInputStream's default ClassLoader... 
+//  No match when the literal path element is a longer form of the segment in the pattern 
+//  Check directly registered editor for type. 
+//  no transactional support for invalidate 
+//  Potentially inherited from outer <beans> sections, otherwise falling back to false. 
+//  Add any property definitions that need adding. 
+//  right is a float 
+//  Self description 
+//  OpAnd 
+//  so non-qualified references 'hasRole()' 'hasIpAddress()' are invoked against it); 
+//  Recalculate taking into account count inside lock and items that   will be purged 
+//  A Class: We need to create an instance for every call. 
+//  The simple case... nothing to bind. 
+//  Method 
+//  header present 
+//  Throw underlying exception 
+//  JPA 2.1 StoredProcedureQuery 
+//  Use bind error processor to create FieldErrors. 
+// -------------------------------------------------------------------------   Methods dealing with prepared statements  ------------------------------------------------------------------------- 
+//  Apply index to Iterator in case of a Set. 
+//  Do the insert 
+//  should include the profile-annotated bean with active profiles set 
+//  Haven't had an afterCommit call: trigger a rollback. 
+//  Clone the invocation to proceed three times   "The Moor's Last Sigh": this technology can cause premature aging 
+//  Send status code 302 by default. 
+//  Make the root object the active context again for evaluating the parameter expressions 
+//  Now check non-effect of removing interceptor that isn't there 
+//  Now to configure the advice... 
+//  Skip the argument types, one at a each loop iteration. 
+//  Combining @Configuration classes with a Properties based loader doesn't really make   sense, but that's OK for unit testing purposes. 
+//  Parse reference definition properties 
+//  Media type from request 
+//  aop.xml is present on the classpath -> enable 
+//  SPR-10180 
+//  Immediate event 
+//  Config loaded from DefaultScriptDetectionGroovySpringContextTestsContext.groovy 
+//  Proxy mode should create new scoped object on each method call 
+//  Get the MBean server connection. 
+//  HTML escaping in tags is performed by the ValueFormatter class. 
+//  SPR-10806 
+//  TODO must be immutable list
+//  Shouldn't happen with connection reset beforehand 
+//  SPR-13705 
+//  create a parent context that includes a mapping 
+//  Giving up -> either using local default executor or none at all... 
+//  If no name specified, apply method identification as transaction name. 
+//  Add each bootstrap method in the symbol table entries. 
+//  InlineList 
+//  "hiding" the target bean in an internal target definition. 
+//  session exists 
+//  assumes rpc.setPattern("java.lang.Object.hashCode"); 
+//  /* + /hotel => /hotel   /*.* + /*.html => /*.html   However:   /usr + /user => /usr/user 
+//  Some debug output might be useful... 
+//  General execution 
+//  Can still mod second object 
+//  We don't actually want to write (just save the body Flux) 
+// ---------------------------------------------------------------------   Copy methods for java.io.InputStream / java.io.OutputStream  --------------------------------------------------------------------- 
+//  retrying in case of concurrent reads on the same key 
+//  If successorBlock has changed it must be processed. Thus, if it is not already in the   list of blocks to process, add it to this list. 
+//  No ThemeResolver and ThemeSource available -> try fallback. 
+//  @CacheKey 
+//  better candidate can be found. 
+//  Should only have one value child element: ref, value, list, etc.   Optionally, there might be a key child element. 
+//  Fix point algorithm: add the first basic block to a list of blocks to process (i.e. blocks   whose stack map frame has changed) and, while there are blocks to process, remove one from   the list and update the stack map frames of its successor blocks in the control flow graph   (which might change them, in which case these blocks must be processed too, and are thus   added to the list of blocks to process). Also compute the maximum stack size of the method, 
+//  before construction 
+//  SPR-15946 
+//  Remove a basic block from the list of blocks to process. 
+//  in to out 
+//  SPR-17330 
+//  For advice applicability check below (involving base packages, assignable types 
+//  Create a pointcut for the anonymous pc and register it. 
+/* 			* Need to use straight JDBC code because we need to make sure that the insert and select			* are performed on the same connection (otherwise we can't be sure that @@identity			* returns the correct value)			 */
+//  Remove since we will be re-inserting the resolved attribute value 
+//  slightly diff here because return value isn't a list, it is a single entity 
+//  Candidate class not an ImportSelector or ImportBeanDefinitionRegistrar ->   process it as an @Configuration class 
+//  SPR-16304 
+//  It is {*....} 
+//  For instance supplied beans try the target type and bean class 
+//  will be managed correctly even if no transaction was created by this aspect. 
+//  MergedAnnotation should follow the same class loader logic 
+//  dump(expressionToCompile.toStringAST(), clazzName, data); 
+//  try first time 
+//  Try to get the exact method first. 
+//  If we haven't closed the Connection in beforeCompletion,   close it now. The holder might have been used for other   cleanup in the meantime, for example by a Hibernate Session. 
+//  NullLiteral 
+//  Set a relative File reference and hope for the best. 
+// -----------------------------   SPR-2454 Test Classes  ----------------------------- 
+//  potentially not detected as a listener by getBeanNamesForType retrieval 
+// -------------------------------------------------------------------------   Convenience query methods for iteration and bulk updates/deletes  ------------------------------------------------------------------------- 
+//  null is not an instanceof anything 
+// Add no interceptors 
+//  should not be a proxy
+//  Do not apply context path to relative URLs. 
+//  TypedStringValue used to be equivalent to an XML-defined argument String 
+//  Has the parser entered a {...} variable capture block in a particular 
+//  Some parsers raise a parse exception 
+//  static @Bean method 
+//  Must not be able to set enter message with return value placeholder 
+//  get the bean again from the BF 
+//  Restore original default locale. 
+//  repro SPR-9123, ReflectivePropertyAccessor JavaBean property names compliance tests 
+//  Serialize and continue... 
+//  Execute scripts directly against the DataSource 
+//  Use the JDK's own MBeanServerInvocationHandler, in particular for native MXBean support. 
+//  filling at least one 256 buffer 
+//  SPR-12283 
+//  assuming RFC-1123 value a la "Tue, 3 Jun 2008 11:05:30 GMT" 
+//  Root context removes it 
+//  SPR-13018 
+//  Ignore LOOKUP_PATH attribute, use our own "fixed" UrlPathHelper with decoding off 
+//  super_class is after the access_flags and this_class fields (2 bytes each). 
+//  Replace GOTO with GOTO_W and JSR with JSR_W. 
+//  No closing ] 
+//  only supported as an output format 
+//  SPR-15672 
+// ---------------------------------------------------------------------   Implementation of JSR-303 Validator interface  --------------------------------------------------------------------- 
+//  primary differentiation 
+//  Inherit Environment if possible 
+//  gh-21670 
+//  Proceed to the joinpoint through the interceptor chain. 
+//  either there was no accessor or it no longer existed 
+//  using default port (which is 80), so do not need to append the port (-1 means ignore) 
+//  Do we need to mark the bean as skipped by its condition?
+//  Remove the merged bean definition for the given bean, if already created. 
+//  FormInserter is parameterized to ClientHttpRequest (for client-side use only) 
+//  leading control character 0x7F (DEL) 
+//  if close is called entire test will fail 
+//  Expose current TransactionStatus, preserving any existing TransactionStatus   for restoration after this transaction is complete. 
+//  MethodReference 
+//  Store single elements 
+//  Treat it like a property...   The readerCache will only contain gettable properties (let's not worry about setters for now). 
+//  Order of decoders may be significant for default data MimeType   selection in RSocketRequester.Builder 
+// assertTrue("5 beans in reftypes, not " + this.beanFactory.getBeanDefinitionCount(), this.beanFactory.getBeanDefinitionCount() == 5); 
+//       | (ELVIS^ expression))?; 
+//  We're looking to find a match or return null.. 
+//  This will be set by DummyPersistenceProvider 
+//  ConversionService not tried before, probably custom editor found   but editor couldn't produce the required type... 
+//  US ASCII 
+//  Default handling of monetary values 
+//  Transport error => no more fallback 
+//  SPR-15772 
+//  If the local variable has never been assigned in this basic block, it is equal to its   value at the beginning of the block. 
+//  First non compiled: 
+//  Hibernate 5.2+ getHibernateFlushMode() 
+//  For now I am making #this not assignable 
+//  Non-strict casing can only be achieved through custom invocation handling.   Only partial MXBean support available!
+//  Build SessionFactory instance. 
+//  Second try is the caching operation on the target class. 
+//  Now let the annotation config loader process the configuration. 
+//  SPR-2368 
+//  4xx 
+//  We may need additional runtime (argument) check. 
+//  Mark handlerBlock as an exception handler. 
+//  Not a valid comparison...
+//  Determine initial delay 
+//  parseCheck("new int[] {1,2,3}.count()");   }   
+//  Initialize other special beans in specific context subclasses. 
+//  Potential test timezone, both have daylight savings on October 21st 
+//  evaluates to "Idvor" 
+//  use own privileged to change accessibility (when security is on) 
+//  Already removed: must have been a dependent bean from another phase 
+//  +1 because creating target for stats call counts 
+//  Static references 
+//  Trim leading and trailing whitespace. 
+//  Load XML resource with context-aware entity resolver. 
+//  wibble2 should be null (cannot be initialized dynamically), there is no setter 
+//  no @Cacheable operation at all 
+//  SPR-16252 
+//  2. Set properties again 
+//  To be picked up by RedirectView 
+//  Update response 
+//  Static factory methods and accessors 
+/*  Upstream write source subscription  */
+//  OpEq 
+//  Prefer remote registries due to cross-server SessionLookup 
+//  EhCache 2.5+: Reusing an existing CacheManager of the same name.   Basically the same code as in CacheManager.getInstance(String),   just storing whether we're dealing with an existing instance. 
+//  If we get here, we're supposed to shut down. 
+//  If this method_info must be copied from an existing one, the size computation is trivial. 
+//  Call any method: should cause automatic tx invocation 
+//  ignoreUnresolvableNestedPlaceholders 
+//  Proceed with file system resolution... 
+//  emulate what happens when BFPPs are added to an application context: It's LIFO-based 
+//  assumes Date->Long converter is registered 
+//  Check reference beyond end of collection 
+// ---------------------------------------------------------------------   Implementation of MessageSource interface  --------------------------------------------------------------------- 
+//  here. 
+//  assume a type 
+//  SPR-9159 
+//  should be dynamic proxy 
+//  Lazily establish a shared Connection, if necessary. 
+//  Publish early application events now that we finally have a multicaster... 
+//  This would be unnecessary in the case of subtyping (e.g. method takes Number but Integer passed in)
+//  Check whether we have any advice. If we don't, we can fallback on direct 
+//  SPR-14044 
+//  stack: <nothing> 
+// assertEquals(2, conf.getInvocations()); 
+//  Must use the ISO-8859-1 encoding because Properties.load(stream) expects it. 
+//  Check if the inspected method has the correct number of parameters. 
+//  Continue below... 
+//  no op 
+//  SPR-9832 
+//  SPR-14796 
+//  Config loaded from BasicGroovyWacTestsContext.groovy 
+//  should still be the new bean with name Sally Greenwood 
+//  = 3 invocations 
+//  Let's try to find a language-only match as a fallback 
+//  Look for explicit serviceId-to-beanName mappings. 
+//  Force disconnect (so we won't try to send close frame) 
+//  Prevent clearConnection() from trying to close 
+//  map table. 
+//  test fields and helpers 
+//  Static method references 
+//  At this point, we need to refresh... 
+//  @CustomStereotype-annotated   @CustomComponent-annotated 
+//  Any of the typical annotations found?
+//  to the caller to convert them (e.g. through a ConversionService). 
+//  Now obtain the value for the fully resolved key... 
+//  HTTP 1.1 Cache-Control header: "no-cache" is the standard value,   "no-store" is necessary to prevent caching on Firefox. 
+//  Type references 
+//  Logging related 
+//  nested arrays 
+//  works fine 
+//  HttpServletRequest required for all further argument types 
+//  should handle Salesman (only interface) 
+//  SPR-16160 
+//  shouldn't go through to remote service 
+//  Accept "application/json" 
+//  "advice" methods 
+//  Only patterns not capturing variables cannot match against just / 
+//  Opening tag still needs to be closed... 
+//  the suffix is missing 
+//  Do not modify the EntityManager: just mark the request accordingly. 
+//  here: RIGHT!=null LEFT==null 
+//  When the input is a map, we push a special context object on the stack   before calling the specified operation. This special context object   has two fields 'key' and 'value' that refer to the map entries key   and value, and they can be referenced in the operation   eg. {'a':'y','b':'n'}.![value=='y'?key:null]" == ['a', null] 
+//  ? super T <= ? super S if S <: T 
+//  index1 is 2 at the start - the 'intArray[#root.index1++]' should not be evaluated twice!   intArray[2] is 3 
+//  Not touched 
+//  Load properties from file afterwards, to let those properties override. 
+//  Create bean instance. 
+//  Verify if the input changes, the result changes 
+//  SPR-16731 
+// -------------------------------------------------------------------------   Convenience methods for storing individual objects  ------------------------------------------------------------------------- 
+//  Generics potentially only match on the target class, not on the proxy... 
+//  no ApplicationContextInitializers have been declared -> nothing to do 
+//  ConverterRegistry implementation 
+//  against the Lockable interface introduced by the specific advisor 
+//  Perform was-null check if necessary (for results that the JDBC driver returns as primitives). 
+//  wrapping, not allocating 
+//  ignore if just being asked for plain Validator 
+//  Reset the {@link #nextListElement} of all the basic blocks that have been processed to null, 
+//  Here we do not extract the labels corresponding to the attribute content. We assume they   are the same or a subset of those of the LocalVariableTable attribute. 
+//  When the condition is a primitive 
+//  gh-22447 
+//  it should behave like ours 
+//  Check already loaded Class if present...   since we possibly can't even load the class file for this Class. 
+// 	; 
+//  Explicit bean definition found, probably replacing an import.   Let's remove the old one and go with the new one. 
+//  Simulate AbstractBeanDefinition.validate() which delegates to 
+//  Level 1 
+//  should be dynamic proxy, implementing both interfaces 
+//  A Resource object: add it to the result. 
+//  There might be multiple 'best patterns', let's make sure we have the correct URI template variables 
+//  Just use default parent if we're not dealing with the parent itself,   and if there's no class name specified. The latter has to happen for 
+//  ActivationSpecImpl class in "inbound" subpackage (WebSphere MQ 6.0.2.1) 
+// ---------------------------------------------------------------------   Convenience methods for working with formatted Strings  --------------------------------------------------------------------- 
+//  gh-23125 
+//  Next, invoke the BeanFactoryPostProcessors that implement Ordered. 
+//  No need to update maxRelativeStackSize (the stack size delta is always negative). 
+//  caller actually wants a reference to the factory. 
+//  Regex patterns that matches URIs. See RFC 3986, appendix B 
+//  should handle Regular (exact) and VIP (closest match) 
+//  SPR-9841 
+//  Still more specific class 
+//  September: 30 days 
+//  Check cached editor for type, registered for superclass or interface. 
+//  'test string' 
+//  Methods to discover parameter names for 
+//  Not found -> check parent, if any. 
+//  If both getter and setter are null, then this does not need exposing. 
+//  config file doesn't matter.  just a placeholder 
+//  Trigger post-initialization callback for all applicable beans... 
+//  same as java.sql.Connection.TRANSACTION_READ_COMMITTED; 
+//  Process Spring's beforeCompletion early, in order to avoid issues   with strict JTA implementations that issue warnings when doing JDBC   operations after transaction completion (e.g. Connection.getWarnings). 
+//  Create empty list for easier checks when registering triggers. 
+//  If the type is not public then when generateCode produces a checkcast to it   then an IllegalAccessError will occur.   If resorting to Object isn't sufficient, the hierarchy could be traversed for   the first public type. 
+//  index1 is 4, intArray[3] is 3 
+//  Create a factory for independent aspect instances. 
+//  Wildcards 
+//  mixed operators 
+//  Create a proxy with JndiObjectFactoryBean's proxy interface and the JndiObjectTargetSource. 
+//  SPR-12605 
+//  Shouldn't proxy framework interfaces 
+//  definition.getConstructorArgumentValues().addGenericArgumentValue("foo"); 
+//  Applies statically but not dynamically 
+//  ----------------------------------------------------------------------------------------------   Methods to parse attributes   ---------------------------------------------------------------------------------------------- 
+//  -----------------------------------------------------------------------------------------------   Exceptions table entries, debug information, max stack and max locals   ----------------------------------------------------------------------------------------------- 
+//  Transacted session created by this container -> rollback. 
+//  If the types are equal, merge(sourceType, dstType) = dstType, so there is no change. 
+//  has the concrete child bean values 
+//  Special case: it returned "this". Note that we can't help   if the target sets a reference to itself in another returned object. 
+//  SPR-17076 
+//  Try with Locale.UK 
+//  Check that references survived prototype creation 
+//  SPR-13464 
+//  Assume it's a connection timeout that would otherwise get lost: e.g. from JDBC 4.0 
+//  Note: fields are ordered as in the method_info structure, and those related to attributes are   ordered as in Section 4.7 of the JVMS. 
+//  If it's a per target aspect, emit the dummy instantiating aspect. 
+//  gh-22959 
+//  PROPERTYORFIELDREFERENCE 
+//  always passes 
+//  right/left 
+//  use of primitive as type for instanceof check - compilable 
+//  Passing (String,Sub) on call to foo(String,Super) is close match 
+//  /* + /hotel -> /hotel ; "/*.*" + "/*.html" -> /*.html   However /user + /user -> /usr/user ; /{foo} + /bar -> /{foo}/bar 
+//  Complete the control flow graph with the successor blocks of subroutines, if needed. 
+//  invoke constructor 
+//              
+//  method call 
+//  gh-23230 
+//  AnnotationTypeMappings does not implement Iterable so we don't create   too many garbage Iterators
+//  Invoke a non-advised method 
+//  Should work identically on subclass definition, in which lookup 
+//  This had better be a Bad SQL Grammar code 
+//  to determine the decorated bean's type than the proxy's type. 
+//  The config class is annotated with @ComponentScan -> perform the scan immediately 
+//  Don't override the class with CGLIB if no overrides. 
+//  6:00 
+//  parseCheck("(#max = {|x,y| $x > $y ? $x : $y }; #max(5,25))", "(#max={|x,y| ($x > $y) ? $x : $y };#max(5,25))");   }   
+//  SPR-13883 
+//  Passing (Sub) on call to (Super[]) is close match 
+//  value of false 
+//  Determine default EntityResolver to use. 
+//  Destroy all cached singletons in the context's BeanFactory. 
+//  Convert arguments if necessary and remap them for varargs if required 
+//  No compatible reader but body may be empty.. 
+//  Add with JDBC 
+//  No bean definition found in this factory -> delegate to parent. 
+//  No other order guarantees for methods with unresolvable dependencies (and methods that depend on them),   Required dependencies will be created via default constructor. 
+//  Explicit bean name found. 
+//  SPR-13615 
+//  no candidate destroy method found 
+//  Handling of IPv6 hosts as described in SPR-13525 
+//  gh-22265 
+//  functionOrVar   : (POUND ID LPAREN) => function   | var     function : POUND id=ID methodArgs -> ^(FUNCTIONREF[$id] methodArgs); 
+//  "read-only not supported" -> ignore, it's just a hint anyway 
+//  Load default strategy implementations from properties file.   This is currently strictly internal and not meant to be customized   by application developers. 
+//  instance check on purpose 
+//  Merged annotation 
+//  Should never happen 
+//  Proceed with read method's property type 
+//  Check name with just hyphens replaced 
+//  add application context to url 
+//  because of the custom editor getValue() should return a String 
+//  gh-22703 
+//  Ignore when no TransformerFactory implementation is available 
+//  to support styles of field injection. 
+//  nested primitive array 
+// -------------------------------------------------------------------------   Methods dealing with a plain java.sql.Connection  ------------------------------------------------------------------------- 
+//  qualifiers 
+//  equals, hashCode, toString 
+//  boolean operators 
+//  Clear context-level resource caches (such as ASM metadata from scanning). 
+// projection: PROJECT^ expression RCURLY!; 
+//  The size, in bytes, to use when allocating the next byte[] 
+//  var : POUND id=ID -> ^(VARIABLEREF[$id]); 
+//  Cache to hold filename lists per Locale 
+//  Perform explicit wiring based on the specified bean definition. 
+//  all types are assignable to themselves and to class Object 
+//  Don't add advisors to an empty list; may indicate that proxying is just not required 
+//  1. First item received   2. writeFunction applied and writeCompletionBarrier subscribed to it   3. writeFunction fails, e.g. to flush status and headers, before request(n) from server 
+//  Bind the connection holder to the thread. 
+//  SPR-9016 
+/*  L1  */
+//  This should *not* recognized as a bean since it does not reside inside an @Component 
+//  Empty payload 
+//  SPR-16187 
+//  Gather all methods with matching name and parameter size. 
+//  not writable 
+//  We use {@link Label#getCanonicalInstance} to store the state of a basic block in only   one place, but this does not work for labels which have not been visited yet.   Therefore, when we detect here two labels having the same bytecode offset, we need to 
+//  Create the set of field types that may be annotated with @DateTimeFormat.   Note: the 3 ReadablePartial concrete types are registered explicitly since   addFormatterForFieldType rules exist for each of these types   (if we did not do this, the default byType rules for LocalDate, LocalTime,   and LocalDateTime would take precedence over the annotation rule, which   is not what we want) 
+//  Use same Connection for further JDBC actions within the transaction.   Thread-bound object will get removed by synchronization at transaction completion. 
+//  drift over white space 
+//  Use copy instead of buffer wrapping because Callback#succeeded() is   used not only to release the buffer but also to request more data   which is a problem for codecs that buffer data. 
+//  Also business exception!?
+//  Check the return value 
+//  The PropertyEditor might not support this value... pass through. 
+//  Insert a stack map frame for this bytecode offset, if requested by setting insertFrame to 
+// ---------------------------------------------------------------------   Implementation of Lifecycle interface  --------------------------------------------------------------------- 
+//  for windows 
+//  Internal exception - has been handled before. 
+//  Plain response found. 
+//  SPR-15831 
+//  protected methods used by the support sub-package 
+//  Remembers count, but we need to get a new reference to nop... 
+//  IMPORTANT! Here we assume that the frames are ordered, as in the StackMapTable attribute,   although this is not guaranteed by the attribute format. This allows an incremental   extraction of the labels corresponding to this attribute (see the comment above for the   StackMapTable attribute).
+//  Instance methods 
+//  ServletResponse, HttpServletResponse 
+//  Create a deep copy, resolving any references for values. 
+//  ---------------------------------------------------------------------   Constructors   --------------------------------------------------------------------- 
+//  supply the implicit upper bound if none are specified 
+//  Just making sure somebody doesn't try to make SocketUtils abstract,   since that would be a breaking change due to the intentional public   constructor. 
+//  ASM specific stack map frame types, used in {@link ClassVisitor#visitFrame}. 
+//  name could be a variable or a type... 
+//  Handle EntityManagerProxy interface. 
+//  Extract individual config locations. 
+//  ignore, see SPR-12999 
+//  This is a CGLIB proxy, so we can proxy it to the target class 
+//  Resolve merged bean definition locally. 
+//  relational operators 
+//  Equality amongst synthesized annotations 
+//  overridden attributes: 
+//  = 1 invocation   = 2 invocations 
+//  An exception handler to register... 
+//  SimpUserRegistry methods 
+//  MESSAGE 
+//  The reflection one will be used for other properties... 
+//  Invoke method on current EntityManager. 
+//  Not enough data to match this path element 
+//  An annotation not present on the classpath is being ignored   by the JVM's class loading -> ignore here as well. 
+//  We're ahead of String + "*/*"   Let's see if we can aggregate the output (lest we time out)... 
+//  Calling foo(String,int) with (String,Integer) requires boxing conversion of argument one 
+//  Autowiring by name or by type 
+//  copy in the sub-array 
+//  Setup the types that we want to match against 
+//    suite of tests root requests for default servlets (SRV 11.2) on Websphere vs Tomcat and other containers   see: https://jira.springframework.org/browse/SPR-7064   
+//  The exception will be ignored by the class loader, anyway... 
+//  gh-22936 
+//  header not present 
+//  A plain value: convert it to a Collection with a single element. 
+//  Clearly a Topic: let's set the "pubSubDomain" flag accordingly. 
+//  fall back to getRelative 
+//  Errors instance, even if no errors.
+//  Trim the text value to avoid unwanted whitespace   caused by typical XML formatting. 
+//  As of 5.1, we explicitly optimize for a transaction-local EntityManager,   aligned with native HibernateTransactionManager behavior. 
+//  -> "unhandled exception", to be logged at error level by Quartz 
+//  missing method 
+//  If no value yet, try to get it as a name_value=xyz parameter 
+//  If no other property specified, consider bean name as static field expression. 
+//  but always false 
+//  gh-21799 
+//  parameterize 
+//  Publish event via parent context as well... 
+// ---------------------------------------------------------------------   Implementation of AnnotationConfigRegistry  --------------------------------------------------------------------- 
+//  Determine if each loader can load a context from the mergedConfig. If it   can, let it; otherwise, keep iterating. 
+//  Will check inherited fields are copied 
+//  methods_count and attributes_count) use 2 bytes each, and each interface uses 2 bytes too. 
+//  Additional check for defining the package, if not defined yet. 
+//  -----------------------------------------------------------------------------------------------   Fields   ----------------------------------------------------------------------------------------------- 
+//  Instead of testing for equality to 1, we just assert that the value   was incremented at least once, since this test class may serve as a   parent class to other tests in a suite, etc. 
+//  Process individual @Bean methods 
+/* 		 * Using a volatile invariant allows us to initialize the FastClass and		 * method index pairs atomically.		 *		 * Double-checked locking is safe with volatile in Java 5.  Before 1.5 this		 * code could allow fastClassInfo to be instantiated more than once, which		 * appears to be benign.		  */
+//  will return true if we're not proxying interfaces 
+//  Two reasons this can occur:   1. the method invoked actually threw a real exception   2. the method invoked was not passed the arguments it expected and has become 'stale' 
+//  No such bean 
+//  Standard collection interfaces 
+//  baseline with standard write method 
+//  If this resolver is not supposed to handle the given view,   return null to pass on to the next resolver in the chain. 
+//  Check cost of repeated construction of beans with method overrides 
+//  data(Object) 
+//  We don't care about the params. 
+//  Global methods first 
+//  Removes Nop1 
+//  Absolutely needs thread-bound Executor to initialize. 
+//  SPR-16844 
+//  try with non-existing value 
+//  SPR-13406 
+//  If the username is empty, we'll simply let the target DataSource   use its default credentials. 
+//  Rely on default pointcut. 
+//  Unknown Number subtypes -> best guess is double comparison 
+//  Invoke factory processors registered with the context instance. 
+//  SPR-13319 
+//  SPR-16868 
+//  It's a prototype -> create a new instance. 
+//  Write type_index and reserve space for num_element_value_pairs. 
+//  log4j-to-slf4j bridge -> we'll rather go with the SLF4J SPI;   however, we still prefer Log4j over the plain SLF4J API since   the latter does not have location awareness support. 
+//  Override global attribute with local attribute. 
+//  A match test returned maybe - if there are any subtype sensitive variables   involved in the test (this, target, at_this, at_target, at_annotation) then   we say this is not a match as in Spring there will never be a different 
+//  needs string conversion 
+//  gh-22705 
+// -------------------------------------------------------------------------   Template methods to be implemented by subclasses  ------------------------------------------------------------------------- 
+//  Passing (Integer, String[]) on call to (String, String[]) is exact match 
+//  Else, just do a toString. 
+//  first set up the pagecontext and the bean 
+//  Remove this unreachable basic block from the exception handler ranges. 
+//  Shortcut: directly present on the element, with no merging needed?
+//  We must copy until this is resolved:   https://github.com/eclipse/jetty.project/issues/2429 
+//  Suppression required due to bug in javac in Java 8: presence of default method in a Serializable interface 
+//  Demand may have arrived since readAndPublish returned 
+//  Fancy variant with dependency registration 
+//  IMPORTANT: Do not pass full property name in here - property editors 
+//  -----------------------------------------------------------------------------------------------   Static helper methods to compute hash codes.   ----------------------------------------------------------------------------------------------- 
+//  Clocks go forward an hour so 2am doesn't exist in CET for this localDateTime 
+//  Make it the new current basic block. 
+//  Not allowed to change the transaction settings of the JDBC Connection. 
+//  There must be a separator ahead of this thing   currentPE SHOULD be a SeparatorPathElement 
+//  No generic information 
+//  This one is only thrown by the JMX 1.2 RI, not by the JDK 1.5 JMX code. 
+//  SPR-13631 
+//  Bind request parameters onto target object. 
+//  Let the bean definition get re-merged now that we're actually creating   the bean... just in case some of its metadata changed in the meantime. 
+//  Only "byType" and "byName" supported, but maybe other default inherited... 
+//  Register the JPA EntityManager's JDBC Connection for the DataSource, if set. 
+//  Create disconnected SingletonTargetSource/EmptyTargetSource. 
+//  default web binding initializer behavior test 
+//  Use the SessionFactory's DataSource for exposing transactions to JDBC code. 
+//  Is the path pattern using * characters in a particular path element 
+//  Physically close durable subscribers at time of Session close call. 
+//  Array required -> apply appropriate conversion of elements. 
+//  RowSet methods for extracting data values 
+//  e.g. on Postgres: getObject returns a PGObject but we need a String 
+//  Third step: replace the ASM specific instructions, if any. 
+//  no conversion required 
+//  parseCheck("new int[] {1,2,3}.min()");   }   
+//  Check correct Session passed into SessionAwareMessageListener. 
+//  Obtain EntityManager reference from JNDI?
+//  Register Sessions and MessageConsumers. 
+//  Standard Bean Validation 1.1 API 
+//  Case of an element_value with an annotation_value field.   See https://docs.oracle.com/javase/specs/jvms/se9/html/jvms-4.html#jvms-4.7.16.1. 
+//  This should work as SerializablePerson is equal 
+//  This stream doesn't have any data in it... 
+//  Use holder's reference count to track synchronizedWithTransaction access. 
+//  SPR-17220 
+//  Avoid further encoding (in the case of strictEncoding=true) 
+//  Effectively, all remaining messages failed... 
+//  This won't work as no resolver is known for the payload
+//  NOTE: This class must not implement Serializable because it serves as base   class for AspectJ aspects (which are not allowed to implement Serializable)! 
+//  @Transactional 
+//  Consider fallback matches if the first pass failed to find anything... 
+//  Parse the element_value_pairs array. 
+//  Actually create the inner bean instance now... 
+//  nothing to assert 
+//  fast default check 
+//  Check two per-instance mixins were distinct 
+//  No working getDataSource method - cannot perform DataSource transaction check
+//  Get as late as possible to minimize the time we "own" the target, in case it comes from a pool... 
+//  MessageSource registered (and found for autowiring) as a bean. 
+//  Expose request to the current thread (for SpEL expressions) 
+//  We need a transaction for this method...
+//  Store result in a local variable in order to appease the   Eclipse compiler with regard to inferred generics. 
+//  type is a primitive or array type. 
+//  InheritedAnnotationClass is NOT annotated or meta-annotated with @Component 
+//  ------------------------------------------------------------------------ 
+//  If srcType and dstType are reference types with the same array dimension,   merge(srcType, dstType) = dim(srcType) | common super class of srcType and dstType. 
+//  fall back to full creation of the FactoryBean instance. 
+//  Specific exception match found. 
+//  Load the raw bytes. 
+//  a?:b (a if it isn't null, otherwise b) 
+//  At this point we know it wasn't a user problem so worth a retry if a 
+//  Uncompilable as argument conversion is occurring 
+//  if the list is full of literals then it will be of the type unmodifiableClass   rather than HashMap (or similar) 
+//  Delegation methods 
+//  "spouse", "touchy", "age" should not be copied 
+//  One of these is set so we should not inherit anything 
+//  Only when the right hand operand is a direct type reference 
+//  Demonstrates we can't inject that event because the generic type is lost 
+//  Catch-all 
+//  spaces 
+//  JPA 2.0: handle unwrap method - could be a proxy match. 
+//  SPR-13801 
+//  Calling foo(String,Integer) with (String,Integer) is exact match 
+//  SEND 
+//  Read the access_flags, name_index and descriptor_index fields. 
+//  6 header bytes and 2 bytes for line_number_table_length. 
+//  Fallback to Spring's own SQL state translation... 
+//  Fill in location information if possible. 
+//  Call from interface-based proxy handle, allowing for an efficient check? 
+//  ActiveMQ 
+//  consume relational operator token 
+//  nothing 
+//  Check that the perclause pointcut is valid 
+//  No result yet: store handler for processing once it comes in 
+//  Methods designed for test introspection 
+//  Cannot access system ClassLoader - oh well, maybe the caller can live with null... 
+//  SiMP header names 
+//  message 
+//  when 
+//  Won't throw an exception 
+//  set JPA 2.0 validation mode 
+//  SPR-12813 
+//  Handle getTargetSession method: return underlying Session. 
+//  Go through the accessors that may be able to resolve it. If they are a cacheable accessor then   get the accessor and use it. If they are not cacheable but report they can read the property 
+//  gh-19890 
+//  SPR-12960 
+//  element stack containing the caught exception type). 
+//  Got hit by call to advised1.getSpouse().getAge() 
+//  Determine ResourceLoader to use. 
+//  Rare case: listener thread failed after container shutdown.   Log at debug level, to avoid spamming the shutdown log. 
+//  Expect no methods 
+//  Encountered a new context hierarchy level?
+//  eat the body 
+//  Custom methods 
+//  Actually invoke the message listener... 
+//  Process superclass, if any 
+//  this should match because of *.jsp 
+//  Apply cache settings, if any 
+//  then proceed with actually loading the bean definitions. 
+//  Inner bean definition must receive same scope as containing bean. 
+//  Only use factory method metadata if the return type is actually expressive enough   for our dependency. Otherwise, the returned instance type may have matched instead   in case of a singleton instance having been registered with the container already. 
+//  ensure the same works for AbstractRefreshableApplicationContext impls too 
+//  SPR-12013 
+//  no context path 
+//  Deal with wildcard bounds 
+//  SPR-14005 
+//  If no target bean name specified, use filter name. 
+//  Should never happen. 
+//  IntelliJ IDEA 11 won't accept int assignment here 
+//  Then try again with a different class loader on the target... 
+//  - The offset of the EnclosingMethod attribute, or 0. 
+//  If it's a FactoryBean, we want to look at what it creates, not the factory class. 
+//  gh-23305 
+//  preserve the existing bean definition. 
+//  Session should not be present 
+//  and won't think it's equal to B's NopInterceptor 
+//  Look for Query arguments, primarily JPA 2.1's addNamedQuery(String, Query) 
+//  Switch to inactive. 
+//  Reset HTTP 1.0 Expires header if present 
+//  Special handling of boolean property. 
+//  non existent indexer (index via a string) 
+//  float is not a wide type 
+//  Regular case: find a handler method reflectively. 
+//  no expected exception!
+//  Note: when a new entry is added it is considered the MRU entry and inserted at the tail. 
+//  Doesn't match a method from Throwable 
+//  SPR-8678 
+//  If srcType is the NULL type, merge(srcType, dstType) = dstType, so there is no change. 
+//  attempt to treat the index value as a number 
+//  Lazily prepare service and stub if necessary. 
+//  not changed 
+//  Using nullSafeHashCode for proper array hashCode handling 
+//  method with changing parameter types (change reference type) 
+// ---------------------------------------------------------------------   Convenience methods for working with String arrays  --------------------------------------------------------------------- 
+//  powerExpr  : unaryExpression (POWER^ unaryExpression)? (INC || DEC) ; 
+//  method with changing target 
+//  SPR-13135 
+//  Assume annotations source. 
+//  Visit the field declaration. 
+//  Perform a fresh lookup for JTA handles. 
+//  For transaction suspension, the JTA TransactionManager is necessary too. 
+//  Always let TypeMismatchNamingException through -   we don't want to fall back to the defaultObject in this case. 
+//  TODO could cache if a singleton for minor performance optimization
+//  Run the actual test several times in order to increase the chance of threads   stepping on each others' toes by overwriting the same mutable state in the   TestContext. 
+//  Fetch JTA TransactionManager from JNDI, if necessary. 
+//  The following declaration simply verifies that @Autowired on the constructor takes   precedence. 
+//  Call again, should be cached 
+//  Register a DisposableBean implementation that performs all destruction   work for the given bean: DestructionAwareBeanPostProcessors,   DisposableBean interface, custom destroy method. 
+//  sanity check: singleton, non-static should work 
+//  length of W/ + " + 0 + 32bits md5 hash + " 
+//  see: TestBean 
+//  Assumes no overloading 
+//  Should return the age before the third, AOP-induced birthday 
+//  test matching with *'s 
+//  data(Publisher<T>, Class<T>) 
+//  Alternative methods relying on RequestContextHolder to find the request 
+//  Only in 2.0 XSD: moved to context namespace as of 2.1 
+//  Determine RMI registry to use. 
+//  assert that all levels have been detected 
+//  mode="proxy" 
+//  now verify failure on bad id 
+//  check reinitialization 
+//  let's see if the remote invocation object works 
+//  Temporarily return non-post-processed object, not storing it yet.. 
+//  Eagerly initialize the default HttpInvokerRequestExecutor, if needed. 
+//  SPR-11030 
+//  handleNoMatch would have been invoked already 
+//  SPR-12894 
+//  Process default methods on interfaces 
+//  It is OK to use the cached accessor 
+//  Ignore, as does IndexedPropertyDescriptor#getPropertyType 
+//  This should theoretically never happen... 
+//  This forces the method to be executed again 
+/*  All tests are in the parent class...  */
+//  Cache region is not defined. Should create one with default properties. 
+//  register the pointcut 
+//  Register name and attribute. 
+//  Read the num_element_value_pairs field (or num_values field for an array_value). 
+//  SPR-12860 
+//  Redeclared for visibility within simp.stomp 
+//  Note: the ordering of the initializers is intentionally: two, one. 
+//  see https://download.oracle.com/javase/1.5.0/docs/api/java/lang/System.html#getProperty(java.lang.String) 
+//  We must avoid fetching a target Connection for "hashCode",   and we must return the same hash code even when the target   Connection has been fetched: use hashCode of Connection proxy. 
+//  The scale to apply in case of a NUMERIC or DECIMAL type, if any 
+//  If handlerRangeBlock is a JSR block, add handlerBlock after the first two outgoing   edges to preserve the hypothesis about JSR block successors order (see   {@link #visitJumpInsn}). 
+//  SPR-3302 
+//  The AJTypeSystem goes to great lengths to provide a uniform appearance between code-style and   annotation-style aspects. Therefore there is no 'clean' way to tell them apart. Here we rely on   an implementation detail of the AspectJ compiler. 
+//  Within a path (e.g. /aa/*/bb) there must be at least one character to match the wildcard 
+//  In order to retain back compatibility we only register Date/Calendar   types when a user defined formatter is specified (see SPR-10105) 
+//  non-singleton, static 
+//  Has nested transaction 
+//  Look for direct name match. 
+//  should re-propagate updated attribute 
+//  Inner bean: generate identity hashcode suffix. 
+//  The (start_pc, index, signature_index) fields of each entry of the LocalVariableTypeTable. 
+//  getClassLoader() returning null indicates the bootstrap ClassLoader 
+//  env.setActiveProfiles(DEV_ACTIVE);  env.setDefaultProfiles("default"); 
+//  Use a locale that doesn't result in the generation of HTML entities 
+//  We need to create a method invocation... 
+//  children[0] is the type of the constructor, don't want to include that in argument processing 
+//  SPR-13218 
+// consume OR 
+//  removed. 
+//  Similar declaration exists in AbstractSockJsSession.. 
+//  Compute the (absolute) input stack size and maximum stack size of this block. 
+// ---------------------------------------------------------------------   Template methods to be implemented/overridden by subclasses  --------------------------------------------------------------------- 
+//  Parameter annotation 
+//  Invoke the method if we don't have a cache hit 
+//  jackson-datatype-joda not available 
+//  Add its successors to the list of blocks to process. Note that {@link #pushSuccessors} does   not push basic blocks which are already in a list. Here this means either in the list of   blocks to process, or in the list of already processed blocks. This second list is 
+//  Set default singleton scope, if not configured before. 
+/* 	java.net.URI	javax.xml.datatype.XMLGregorianCalendarxs:anySimpleType	javax.xml.datatype.Duration	java.lang.Object	java.awt.Image	javax.activation.DataHandler	javax.xml.transform.Source	java.util.UUID		  */
+//  null): 
+//  const_value_index, CONSTANT_Utf8 
+//  Close the HTTP connection (if applicable). 
+//  in the case of a non-string *key*, however, we can do better.  Alert   the user that under these very special conditions (non-object key +   SecurityManager that disallows access to system properties), they
+//  Check list 
+//  If srcType and dstType are array types of equal dimension but different element types,   merge(srcType, dstType) = dim(srcType) - 1 | java/lang/Object. 
+//  Non existent field (or property): 
+//  Delay send since server processes concurrently   Ideally order should be preserved or receipts supported (simple broker) 
+//  InitializingBean 
+//  SPR-14506 
+// ---------------------------------------------------------------------   HttpServletResponse properties  --------------------------------------------------------------------- 
+//  Check the class' major_version. This field is after the magic and minor_version fields, which 
+//  SPR-11360 
+//  stack: left/right/right   stack: left/right 
+//  Explicitly configured warn logger in logException method. 
+/*  Locale -> BeanFactory  */
+//  Original handler must have been invoked as well... 
+//  Hierarchy traversal... 
+//  Continue since the BytesMessage typically won't be used any further. 
+//  Only set parent context as parent MessageSource if no parent MessageSource   registered already. 
+//  should skip connection to the server 
+//  Find a param aware ancestor 
+// (nextPos > candidateIndex) && 
+//  HTTP 1.0 header 
+//  the DAY_OF_WEEK values in java.util.Calendar start with 1 (Sunday),   but in the cron pattern, they start with 0, so we subtract 1 here 
+//  Configuration properties 
+//  StompEncoder isn't involved 
+//  number of times to repeat 'count' evaluations (for averaging) 
+//  relative to the persistence unit root, according to the JPA spec 
+//  Register a custom MethodResolver... 
+//  look at a LOT of items 
+//  Hessian 2.0 call... for some reason not handled in HessianServlet! 
+// 	    | constructor 
+//  evaluate("aVarargsMethod2(8,new String[]{'a','b','c'})", 11, Integer.class); 
+//  Save previous status values, for re-exposure at the end of this tag. 
+// SPR-12403 
+//  Set rollback-only in case of Vavr failure matching our rollback rules... 
+//  Make resolvable dependencies (e.g. ResourceLoader) available here as well... 
+// -------------------------------------------------------------------------   Core methods used by NamedParameterJdbcTemplate and SqlQuery/SqlUpdate  ------------------------------------------------------------------------- 
+//  Do not require @Transactional test methods to be public. 
+//  first and last need conversion 
+// -------------------   SPR-3534 classes  ------------------- 
+//  leading whitespace control characters (00-1F) 
+//  check position for final 'false' 
+//  SPR-11528 
+//  Send more data illegally 
+//  only increment when creating the actual target - not the proxy 
+//  Use Msg.newBuilder() to construct. 
+//  Now the expression has cached that throwException(int) is the right thing to call   Let's change 'bar' to be a PlaceOfBirth which indicates the cached reference is 
+/* 	 * Expect instantiation through a non-default constructor, just to be sure that Spring will fail if it tries to instantiate it,	 * and will subsequently delegate to the fallback bean instance producer. 	  */
+//  If the target class is null, the method will be unchanged. 
+//  Shouldn't have changed value in joinpoint 
+//  was /**/*Other 
+//  Add default constructor to list of optional constructors, as fallback. 
+//  Configure transactional connection settings for Quartz. 
+//  Remove empty entries from the hierarchy map. 
+//  Should not throw 
+//  SPR-12287 
+//  SPR-13554: convention mapping mixed with AlaisFor annotations   locations doesn't apply because it has no AlaisFor annotation 
+//  No underlying Connection -> lazy init via DriverManager. 
+//  Note: the following 'multi-line' layout is for enhanced code readability. 
+//  the advice declared last has higher precedence 
+//  We can skip creating a MethodInvocation: just invoke the target directly.   Note that the final invoker must be an InvokerInterceptor, so we know   it does nothing but a reflective operation on the target, and no hot   swapping or fancy proxying. 
+// containerEmfb.destroy();  emfMc.verify(); 
+//  Lifecycle implementation 
+//  Publisher implementation... 
+//  The following call to enigma() literally invokes the local   enigma() method, not a CGLIB proxied version, since these methods   are essentially factory bean methods. 
+//  iii=42 
+//  typical classes). 
+//  we're relying on doOnDiscard in base class 
+//  Check if need to box it for the method reference?
+//  Could not possibly contain a currency code ->   try with locale and likely let it fail on parse. 
+//  the updated script surrounds the message in quotes before returning... 
+//  The operand is going to be read and then assigned to, we don't want to evaluate it twice. 
+//  Not the usual case - simply forget about the type check... 
+//  Haven't yet been into second branch 
+//  Possibly "c:" drive prefix on Windows, to be upper-cased for proper duplicate detection 
+//  perform tests with classValuesAsString = true 
+//  even when triggered by lifecycle interfaces like BeanFactoryAware. 
+//  Differing types of number, not yet supported
+//  Custom argument resolvers and return value handlers 
+//  SPR-3173 
+//  gh-23205 
+//  Collect any explicit @CachePuts 
+//  Passing (int,Sub,boolean) on call to foo(Integer,Super,Boolean) requires boxing conversion of arguments zero and two   TODO checkMatch(new Class<?>[] {Integer.TYPE, Sub.class, Boolean.TYPE}, new Class<?>[] {Integer.class, Super.class, Boolean.class}, tc, ArgsMatchKind.REQUIRES_CONVERSION); 
+//  It is a candidate FactoryBean - go ahead with enhancement 
+//  --- ContextLoader ------------------------------------------------------- 
+// ---------------------------------------------------------------------   Implementation of ApplicationContext interface  --------------------------------------------------------------------- 
+//  CGLIB proxy 
+//  Assert no HttpMessageNotReadableException is thrown 
+//  Write as Mono if possible as an optimization hint to Reactor Netty   ChannelSendOperator not necessary for Mono 
+//  Only register config value editors if explicitly requested. 
+//  Register default environment beans. 
+//  Well known variables:   currently active context object 
+//  Generated by the protocol buffer compiler.  DO NOT EDIT!   source: sample.proto 
+//  "down" the annotation hierarchy. 
+//  AMC start 
+//  Allow for multiple close calls... 
+//  Keep CGLIB happy 
+//  In Gson, toJson with a type argument will exclusively use that given type,   ignoring the actual type of the object... which might be more specific,   e.g. a subclass of the specified type which includes additional fields.   As a consequence, we're only passing in parameterized type declarations   which might contain extra generics that the object instance doesn't retain. 
+//  SPR-13443 
+//  We couldn't identify it more precisely. 
+//  Prepend container prefix if not already specified and no other scheme given. 
+//  The output of the accessor is a primitive but from the block above it might be null,   so to have a common stack element type at skipIfNull target it is necessary   to box the primitive 
+//  It's an empty enum identifier: reset the enum value to null. 
+//  Publisher<T> methods (we're the Publisher to the writeSubscriber).. 
+//  Determine autowire mode. 
+//  Let's try NIO file system providers via Paths.get(URI) 
+//  we need the real target too, not just the proxy... 
+//  Proceed with actual listener initialization. 
+//  Hibernate 5.1/5.2: manually enforce connection release mode AFTER_STATEMENT (the JTA default) 
+// -------------------------------------------------------------------------   Implementation hooks and helper methods  ------------------------------------------------------------------------- 
+//  This code block checks whether the left or right operand is null and handles 
+//  Destroy the corresponding DisposableBean instance. 
+//  IMPORTANT: this must be the last part of the ClassFile size computation, because the previous 
+//  Explicit reference equality is added here just in case Arrays.equals does not have one 
+//  Correctly returns false since JmxUtils won't navigate to the extended interface 
+//  RxJava 2 Single 
+//  The bytecode offset of the first explicit frame is not offset_delta + 1 but only   offset_delta. Setting the implicit frame offset to -1 allows us to use of the 
+//  Necessary for older Oracle drivers, in particular when running against an Oracle 10 database.   Should also work fine against other drivers/databases since it uses standard JDBC 4.0 API. 
+//  Mark this bean as currently in creation, even if just partially. 
+//  Always load via SpringTemplateLoader (without hot detection of template changes). 
+//  this.beanOrName must be a String representing the bean name if   this.resolvedBean is null. 
+//  Efficiently check whether bean definition exists in this factory. 
+//  Initialize LoadTimeWeaverAware beans early to allow for registering their transformers early. 
+// -------------------------------------------------------------------------   Helper methods used by the operations above  ------------------------------------------------------------------------- 
+//  No thread context class loader -> use class loader of this class. 
+//  SPR-12665 
+// -------------------------------------------------------------------------   Management of transaction synchronizations  ------------------------------------------------------------------------- 
+//  UTF-8 
+//  Now add attribute and try again 
+//  IMPORTANT: Do not pass full property name in here - property editors   must not kick in for map keys but rather only for map values. 
+//  SPR-14988 
+//  ignore the output 
+//  variables and functions 
+//  if a new object is requested or none exists under the current 
+//  Remove LeakAwareDataBuffer wrapper so delegate can find native buffers 
+//  Empty file or directory -> not considered readable... 
+//  Register component for the surrounding <jms:annotation-driven> element. 
+//  Use Log4j 2.x directly, including location awareness support 
+//  ReadOnlySystemAttributesMap will come into play. 
+//  SPR-16060 
+//  first child 
+//  Try Hibernate Validator 5.2's externalClassLoader(ClassLoader) method 
+//  Flip the default implementation from SyncHandlerMethodArgumentResolver:   instead of delegating to (sync) resolveArgumentValue,   call (async) super.resolveArgument shared with non-blocking resolvers;   actual resolution below still sync... 
+//  Handle JPA 2.0 unwrap method - could be a proxy match. 
+//  Let it throw raw if the type of the exception is on the throws clause of the method. 
+//  Static expansion helpers 
+//  Try to find cached factory for Locale: 
+//  Hits joinpoint 
+//  Wrap the EntityManagerFactory in a factory implementing all its interfaces.   This allows interception of createEntityManager methods to return an   application-managed EntityManager proxy that automatically joins   existing transactions. 
+//  T <= ? extends T 
+//  Fallback 
+//  Sybase: internal I/O error   Sybase: unexpected I/O error   DB2: communication failure 
+//  Otherwise ignore new imported config class; existing non-imported class overrides it. 
+//  Retrieval of bean instances 
+//  @Autowired 
+//  Call afterCompletion with the appropriate status indication. 
+//  Ignore when no TransformerFactory implementation is available...
+//  Possibly a bean constraint with property path: retrieve the actual property value.   However, explicitly avoid this for "address[]" style paths that we can't handle. 
+// 	literal    : INTEGER_LITERAL  	| boolLiteral  	| STRING_LITERAL    | HEXADECIMAL_INTEGER_LITERAL    | REAL_LITERAL  	| DQ_STRING_LITERAL 
+//  Single string methods 
+//  Else attempt to detect defaults... 
+//  Only actually register it if there are destinations specified;   otherwise @MessageMapping is just being used as a (meta-annotation) marker. 
+//  Process captures   SPR-8455 
+//  Check all bean definitions. 
+//  Check if repackaging is needed... 
+//  Check whether aspect is enabled (to cope with cases where the AJ is pulled in automatically) 
+//  The listener successfully published the event... 
+//  Check result state: It might indicate a Throwable to rethrow. 
+//  SPR-15727 
+//  Now cause it to throw an exception: 
+//  Steps in the binding algorithm... 
+//  Shut down the invokers. 
+//  Build default TypeConverter, registering custom editors. 
+//  Explicitly remove instance from singleton cache: It might have been put there   eagerly by the creation process, to allow for circular reference resolution.   Also remove any beans that received a temporary reference to the bean. 
+//  Implementation of java.util.Map 
+//  assert the method name is used 
+//  First invoke the user-specific ExceptionListener, if any. 
+/*  Cross-server session lookup (e.g. same user connected to multiple servers)  */
+//  Validate column count. 
+//  This next code is only generated because of the registered editor, using the   registered type of the editor as guess for the content type of the collection. 
+//  Initialize message source for this context. 
+//  TypeReference 
+//  We failed more than once in a row or on startup -   wait before first recovery attempt. 
+//  gh-23622 
+//  Package up the remaining arguments into the array 
+//  This is a better match... 
+//  Didn't get removed 
+//  Should never happen.. 
+//  We are only validating the request. The response is mocked out.   person.getName().equals("Ludwig van Beethoven") 
+//  SPR-15819 
+//  hit sentinel at end of value   will take us to the end 
+//  No NavigationHandler specified through constructor argument:   Call original handler, marking the end of this chain. 
+//  Publish the context as a servlet context attribute. 
+//  filter proxy, we'll have to resort to lazy initialization. 
+//  Delegate to WebContentGenerator for checking and preparing. 
+//  Fast-forward 31 minutes 
+//  All literals so we can do this straight away 
+//  As of JDK 8, invoking getAnnotation() on a bridge method actually   finds an   annotation on its 'bridged' method [1]; however, the Eclipse compiler   will not   support this until Eclipse 4.9 [2]. Thus, we effectively ignore the   following   assertion if the test is currently executing within the Eclipse IDE.   [1] https://bugs.openjdk.java.net/browse/JDK-6695379   [2] https://bugs.eclipse.org/bugs/show_bug.cgi?id=495396 
+//  Transport methods 
+//  Safari needs at least 1024 bytes to parse the website.   https://code.google.com/p/browsersec/wiki/Part2#Survey_of_content_sniffing_behaviors 
+//  Reply-To is queried when response is being created... 
+//  do nothing 
+//  Wrapped in Hibernate 5.2, with the constraint violation as cause 
+//  <-- not a valid value...
+//  Can use advised and ProxyFactory interchangeably 
+//  no cache hit at all, caching disabled 
+//  Always accept such event when the type is unknown 
+//  Ignore -> simply doesn't match. 
+//  SPR-9142 
+//  Corresponding SQL types for JSR-310 / Joda-Time types, left up 
+//  Visit the fields and methods. 
+//  skip to flights 
+//  attrFoo should be overridden in concrete subclass 
+//  Try variable resolution against target type 
+//  No args -> delegate to standard getBean method. 
+//  Trigger commit here to let exceptions propagate to the caller. 
+//  give other interceptors a chance to handle the error 
+//  the return value is the new value, not the original value 
+//  type not public but method is 
+//  Custom arguments 
+//  number of evaluations that are timed in one run 
+//  Cache forever: prefer locale cache over repeated getBundle calls. 
+// ---------------------------------------------------------------------   Implementation of DisposableBean interface  --------------------------------------------------------------------- 
+//  Here we do not extract the labels corresponding to the attribute content. This would   require a full parsing of the attribute, which would need to be repeated when parsing   the bytecode instructions (see below). Instead, the content of the attribute is read one   type annotation at a time (i.e. after a type annotation has been visited, the next type   annotation is read), and the labels it contains are also extracted one annotation at a   time. This assumes that type annotations are ordered by increasing bytecode offset.
+//  Destination argument being null is ok for a producer 
+// 		checkError("/{foo}{bar}/",6,PatternMessage.CANNOT_HAVE_ADJACENT_CAPTURES); 
+//  Don't use the supplied testClass; instead ensure that we are   building the MCC for the actual test class that declared the   configuration for the current level in the context hierarchy. 
+//  form to be passed to the method 
+//  Instantiate all remaining (non-lazy-init) singletons. 
+//  Restore reflective handles (which are unfortunately not serializable) 
+//  force use of Class.getClassLoader() 
+//  --- When --- 
+//  If it starts with a reference prefix... 
+//  Should usually be the case for traditional JAR files. 
+//  Invoke the handler method with appropriate arguments. 
+//  unaryExpression: (PLUS^ | MINUS^ | BANG^ | INC^ | DEC^) unaryExpression | primaryExpression ; 
+//  Either targetClass or targetObject specified. 
+//  YAML can have numbers as keys 
+//  Request 3 retrieves and invalidates 
+//  startKey is the level at which to begin clearing the cache, 
+//  Create and/or resize the output local variables array if necessary. 
+//  Use the CCI execute method with output record as parameter. 
+//  the parent bean is autowiring 
+//  Standard JCA 1.5 "subscriptionDurability" apparently not supported... 
+//  Unknown Number subtype -> best guess is double decrement 
+//  In case of an optional Collection/Map, silently ignore a non-unique case:   possibly it was meant to be an empty collection of multiple regular beans   (before 4.3 in particular when we didn't even look for collection beans). 
+//  Bean name or resolved handler?
+//  Custom request method 
+//  Use same EntityManager for further JPA operations within the transaction.   Thread-bound object will get removed by synchronization at transaction completion. 
+//  Handle radix specifier, if present. 
+//  Construct using org.springframework.protobuf.Msg.newBuilder() 
+//  Register JobDetails. 
+//  Passing (String) on call to (String[]) is exact match 
+//  Get the listener from the map value. 
+//  The first time searching, we don't care about for this test   Try with Locale.US 
+//  An invalid scoped proxy arrangement - let's ignore it. 
+//  A context instance was injected at construction time -> use it 
+//  Inner cast required by Eclipse IDE. 
+//  if t.data were null, we'd know it wasn't the textual form, it was the symbol form 
+//  SPR-16494   https://github.com/reactor/reactor-netty/issues/283 
+//  Second request: same session 
+//  GZIP response found - need to unzip. 
+//  manually trigger an Exception with the above bad MessageListener... 
+//  Not sure we can get here because -1 is OpMinus 
+//  Write the bootstrap method in the BootstrapMethods table. This is necessary to be able to   compare it with existing ones, and will be reverted below if there is already a similar 
+//  Matches the getAge() method in any class 
+//  If there is more data, it must start with the separator 
+//  Not using "parseMimeType" to avoid static init cost 
+//  Will do JNDI lookup to get home but won't call create   Could actually try to figure out interface from create?
+//  Copy and reset the nextAttribute field so that it can also be used in MethodWriter. 
+//  (whose size depends on its path_length field). 
+//  Not serializable... Servlet containers usually automatically   unbind the attribute in this case. 
+//  OpDec 
+//  We're looking for a regular reference but we're a factory bean that has   a decorated bean definition. The target bean should be the same type 
+//  Now populate the database 
+//  Prepend with slash if not already present. 
+//  Key should be coerced to string representation of 42 
+//  interfaces 
+//  we really want to return the proxy. 
+//  method level 
+//  Return a transactional Connection, if any. 
+//  Specific to LinkedCaseInsensitiveMap 
+//  Return the start offset of the rest of the type_annotation structure. 
+// ---------------------------------------------------------------------   HttpServletResponse interface  --------------------------------------------------------------------- 
+//  Note: @Order is not inherited. 
+//  FreeMarker will only accept known keys in its setSettings and 
+//  4 
+//  SPR-9284 
+//  Are there any file prefix/suffix things to consider?
+//  Could read these from files 
+//  about the count 
+// 1.0
+//  Ask the expression AST to generate the body of the method 
+// ---------------------------------------------------------------------   Implementation methods  --------------------------------------------------------------------- 
+//  position in the old string 
+//  Process re-execution outside of the synchronized block. 
+//  Set statement separator to double newline so that ";" is not   considered a statement separator within the source code of the   aliased function 'REVERSE'. 
+//  Default instance to be re-used across requests, unless one is configured explicitly 
+//  No JSON view specified... 
+//  Register bean as disposable. 
+//  static getter 
+//  Remove all remaining references to any removed contexts from the 
+//  Rethrow JMSException to indicate an infrastructure problem   that may have to trigger recovery... 
+//  SPR-12226 and SPR-12660 
+// SPR-16754 
+//  asserts that the set contract is not violated during a merge() operation... 
+//  Get the unmerged list of attributes for the target annotation. 
+//            
+//  Already filtered 
+//  Write content type and also length (determined via byte array). 
+//  Subscriber methods (we're the subscriber to the write function).. 
+//  In the form X is assignable to <? extends Number> 
+//  TaskExecutor indicated a preference for short-lived tasks. According to   setMaxMessagesPerTask javadoc, we'll use 10 message per task in this case   unless the user specified a custom value. 
+//  SPR-16668 
+//  path element 
+//  ScopedProxyFactoryBean's "proxyTargetClass" default is TRUE, so we don't need to set it explicitly here. 
+//  Set up the escalation list... 
+//  Disallowing access to System#getenv means that our   ReadOnlySystemAttributesMap will come into play. 
+//  Candidate class is an ImportSelector -> delegate to it to determine imports 
+//  Second try is the transaction attribute on the target class. 
+//  A Groovy script, probably creating an instance: let's execute it. 
+//  Report first connect to the ListenableFuture 
+//  This should happen only once, for the implicit first frame (which is explicitly visited   in ClassReader if the EXPAND_ASM_INSNS option is used - and COMPUTE_INSERTED_FRAMES   can't be set if EXPAND_ASM_INSNS is not used). 
+//  to be ignored 
+//  verify that we can call a method with args that are subtypes of the   target method arg types 
+//  Skip property population phase for null instance. 
+//  Removes counting before advisor 
+//  assertEquals(null, state.getRootContextObject().getValue()); 
+//  Hessian 4.0 check: another layer of InvocationTargetException. 
+//  Invariant: currentOffset is the offset of an attribute_info structure.   Read the attribute_length field (2 bytes after the start of the attribute_info) and skip   this many bytes, plus 6 for the attribute_name_index and attribute_length fields   (yielding the total size of the attribute_info structure). 
+//  Load reference definition file 
+//  Check name as-is 
+//  Handler method lookup 
+//  Find the root WebApplicationContext 
+//  no more events with what currently has been fed to the reader 
+//  Dynamic SQL error   Cardinality violation   Syntax error direct SQL   Syntax error dynamic SQL   General SQL syntax error   Oracle: unknown identifier
+//  These test classes simulate a pattern of public/private classes seen in Spring Security 
+//  just want to ensure that it doesn't bomb 
+//  does not handle Z, B, C, S
+//  Register aliases for bean name, if any. 
+//  HEAD 
+//  SPR-13416 
+//  The following (AnnotationAttributes) cast is required on JDK 9+. 
+//  SPR-10398 
+//  perform tests with classValuesAsString = false (the default) 
+// ---------------------------------------------------------------------   Implementation of InitializingBean interface  --------------------------------------------------------------------- 
+//  We need to visit all indexed annotations. 
+//  Visit the AnnotationDefault attribute. 
+//  Case of an element_value with an enum_const_value field.   See https://docs.oracle.com/javase/specs/jvms/se9/html/jvms-4.html#jvms-4.7.16.1. 
+//  now unwrap scoped proxy 
+//  first invocation -- should succeed 
+//  not a useful expression but tests nested expression syntax that clashes with template prefix/suffix 
+//  ------------------------------------------------------------------------- 
+//  SPR-10414 
+//  never null 
+//  Choose an "aop" interceptor (used for AOP calls). 
+//  private property will be accessed through getter() 
+//  clear() 
+//  stack: left(1or2)/right 
+//  Common cache initialization delegates for subclasses 
+//  ByteArrayOutputStream does not throw   any IOException 
+//  Determine handler adapter for the current request. 
+//  Skip call to converters, as they may update the body. 
+//  Must fail as annotation on interfaces should not be considered a match 
+//  Process any collected put requests, either from @CachePut or a @Cacheable miss 
+//  Before commit not invoked 
+//  path intentionally omitted 
+//  Invalid Accept-Language header: treat as empty for matching purposes 
+//  here: RIGHT==null LEFT==unknown 
+//  Keep the FULL_FRAME type. 
+//  Direct URL lookup 
+//  isAnnotationInherited() does not currently traverse interface hierarchies. 
+//  By construction, jsr targets are stored in the second outgoing edge of basic blocks   that ends with a jsr instruction (see {@link #FLAG_SUBROUTINE_CALLER}). 
+//  Initial request thread 
+//  SPR-12747 
+//  BigDecimal 
+//  No doOnDiscard as operators used do not cache 
+//  inline map creation 
+//  If EJB 3.1 API not present, simply ignore. 
+//  Wrap the response to ignore further header changes 
+/* 			* If useNewConnection is true, then we obtain a non-managed connection so our modifications			* are handled in a separate transaction. If it is false, then we use the current transaction's			* connection relying on the use of a non-transactional storage engine like MYISAM for the			* incrementer table. We also use straight JDBC code because we need to make sure that the insert			* and select are performed on the same connection (otherwise we can't be sure that last_insert_id()			* returned the correct value).			 */
+//  FORWARD/ERROR/ASYNC: minimal message (there should be enough context already) 
+//  2. Resolve with Accept-Encoding 
+// 		beanFactory.getBean("name-value1", TestBean.class); 
+//  Use defaults if no transaction definition given. 
+//  equals 
+//  Check that it is the Hibernate FlushMode type, not JPA's... 
+//  It's an interceptor, so we just invoke it: The pointcut will have   been evaluated statically before this object was constructed. 
+//  static method BFPP does not interfere with lifecycle -> autowiring succeeds 
+//  Check we can add a new advisor to the target 
+//  See SPR-10945 Serialized events result in a null source 
+//  (see BigDecimal javadoc for details) 
+//  productExpression: powerExpr ((STAR^ | DIV^| MOD^) powerExpr)* ; 
+//  Try to build the most specific interface possible for inherited methods to be   considered for sub-interface matches as well, in particular for proxy classes.   Note: AspectJ is only going to take Method.getDeclaringClass() into account. 
+//  Counter suffix for generated classes within this SpelCompiler instance 
+//  WildcardTheRestPathElement 
+//  When container type is omitted and therefore inferred from @Repeatable 
+//  test global property (should be null) 
+//  Then skip the num_element_value_pairs and element_value_pairs fields (by reading them 
+//  oh well, at least we tried... 
+// ---------------------------------------------------------------------   Copy methods for java.io.Reader / java.io.Writer  --------------------------------------------------------------------- 
+//  Ignore -> can only happen in case of a JTA transaction. 
+//  No BindingResult available as request attribute:   Probably forwarded directly to a form view.   Let's do the best we can: extract a plain target if appropriate. 
+//  Use loadFactor to disable resize 
+//  Ignore reinitialization if same context passed in. 
+//  By definition, a LOCAL_KIND type designates the concrete type of a local variable at   the beginning of the basic block corresponding to this frame (which is known when   this method is called, but was not when the abstract type was computed). 
+//  isOpen() check used below to find out about it. 
+//  Happens after deserialization, during destruction... 
+//  Close and stop the listeners 
+//  Neither transaction nor synchronization active. 
+//  both the upper and lower bounds of the right-hand side must be   completely enclosed in the upper and lower bounds of the left-   hand side. 
+//  This should always be true, since we're only calling this when active. 
+//  unexpectedly ran out of data 
+/*  useNamedValues =  */
+//  Happening on the production version of Google App Engine, coming out of the   restricted "sun.reflect.ReflectionFactory" class... 
+//  or removing the attribute, respectively, if appropriate. 
+//  Did the handler return a view to render?
+//  Use a factory bean for the resources so they can be given an order if a pattern is used 
+//  Register a custom MethodFilter... 
+//  -----------------------------------------------------------------------------------------------   Implementation of the FieldVisitor abstract class   ----------------------------------------------------------------------------------------------- 
+//  Leniently match first line due to differences between JDK 8 and JDK 9+. 
+//  Start a new current basic block, and reset the current and maximum relative stack sizes. 
+//  attribute, or null. 
+//  JDK default HTTP client blacklist headers like Origin 
+//  Last-modified timestamp of file will just be read if caching with timeout. 
+//  root still null 
+//  Complete the control flow graph with exception handler blocks. 
+/*  * Property editor that converts a String into a {@link TransactionAttributeSource}. * The transaction attribute string must be parseable by the * {@link TransactionAttributeEditor} in this package. * * <p>Strings are in property syntax, with the form:<br> * {@code FQCN.methodName=&lt;transaction attribute string&gt;} * * <p>For example:<br> * {@code com.mycompany.mycode.MyClass.myMethod=PROPAGATION_MANDATORY,ISOLATION_DEFAULT} * * <p><b>NOTE:</b> The specified class must be the one where the methods are * defined; in case of implementing an interface, the interface class name. * * <p>Note: Will register all overloaded methods for a given name. * Does not support explicit registration of certain overloaded methods. * Supports "xxx*" mappings, e.g. "notify*" for "notify" and "notifyAll". * * @author Rod Johnson * @author Juergen Hoeller * @since 26.04.2003 * @see TransactionAttributeEditor  */
+/* 	 * Return true if the parameter name binding for the given parameter	 * index has not yet been assigned.	  */
+//  SPR-12569 
+//  No serializable type wrapping necessary (e.g. for java.lang.Class) 
+//  simple ctor 
+//  SPR-10704 
+//  No getObject() method -> shouldn't happen, but as long as nobody is trying to call it...
+//  Ignore - no need to check resolvable type for manually registered singleton 
+//  Second one is bogus 
+//  Compute the offset and the length of the BootstrapMethods 'bootstrap_methods' array. 
+//  Create template for client-side JNDI lookup. 
+//  Consider a pre-bound connection as transaction. 
+//  Find introduction fields. 
+//  Set of in parameter names to exclude use for any not listed 
+//  SPR-9571 and SPR-14363 
+//  value is array containing [true,false] 
+//  Gets additional call(s) from TransactionControl 
+//  NOTE: while you might expect the main key to have been updated, it hasn't. @Cacheable operations   are only processed in case of a cache miss. This is why combining @Cacheable with @CachePut   is a very bad idea. We could refine the condition now that we can figure out if we are going   to invoke the method anyway but that brings a whole new set of potential regressions.
+//  The instruction after the GOTO_W becomes the target of the IFNOT instruction. 
+//  JPA 2.1 API available but method not actually implemented in persistence provider:   falling back to regular createEntityManager method.
+//  If the original locations or classes were not empty, there's no   need to bother with default detection checks; just let the   appropriate loader process the configuration. 
+//  Reset previous status values. 
+//  not directly implemented 
+//  Note: the XML bean definition for "enigma" always wins since   ConfigurationClassBeanDefinitionReader.isOverriddenByExistingDefinition()   lets XML bean definitions override those "discovered" later via an   @Bean method. 
+//  If counter is 5 then the method got called twice! 
+//  Check for Tomcat's new copyWithoutTransformers on InstrumentableClassLoader first 
+//  Convenience factory methods 
+//  not a proxy so this should not have changed 
+//  -----------------------------------------------------------------------------------------------   Methods to manage line numbers   ----------------------------------------------------------------------------------------------- 
+//  ref to method 
+/* 	 * We've found the start of a binding pointcut at the given index into the	 * token array. Now we need to extract the pointcut body and return it.	  */
+//  Prepare broadcast message from remote server 
+//  Special case: URI is different from servlet path. 
+//  Load properties from file upfront, to let local properties override. 
+//  Keys in the Properties object are sorted. 
+//  Must fail as annotation isn't inherited 
+//  uninitialized to let post-processors apply to them! 
+//  varargs conversion but no varargs 
+//  Initialize RouteMatcher before parent initializes handler mappings 
+//  3) Verify that the AnnotationAttributes and synthesized annotation are equivalent 
+//  If we get here, just pass the invocation on. 
+//  report all connect failures to the handler   post-connect issues 
+//  second argument not used, see config 
+//  varargs with conversion required 
+//  Now let's try it with the special target 
+/* 	 * Add an attribute for a transactional method.	 * <p>Method names can be exact matches, or of the pattern "xxx*",	 * "*xxx" or "*xxx*" for matching multiple methods.	 * @param methodName the name of the method	 * @param attr attribute associated with the method	  */
+//  TODO: SPR-15871, SPR-15542
+//  list = LCURLY (element (COMMA element)*) RCURLY 
+//  bind em to the thread now since it's created 
+//  Count minus duplicate 
+//  If [handlerStart,handlerEnd[ is included in [rangeStart,rangeEnd[, remove firstHandler. 
+/* 	 * Add an attribute for a cacheable method.	 * <p>Method names can be exact matches, or of the pattern "xxx*",	 * "*xxx" or "*xxx*" for matching multiple methods.	 * @param methodName the name of the method	 * @param ops operation associated with the method	  */
+//  e.g. was ROLE_APPLICATION, now overriding with ROLE_SUPPORT or ROLE_INFRASTRUCTURE 
+//  'value' in @SpringAppConfig should not override 'value' in @ContextConfig 
+//  Going to perform a refresh check - update the timestamp. 
+//  Second pass: Look for parameter index match. 
+//  visibleTypeAnnotationOffsets array). 
+//  Don't be clever for arrays or a null target... 
+//  see ConfigurablePropertyResolver#setRequiredProperties 
+//  Apply transaction name (if any) to WebLogic transaction. 
+//  Declare binding disabled (e.g. via @ModelAttribute method) 
+//  Retrieve existing registry. 
+//  Use given NumberFormat for parsing text. 
+//  if not empty, drop through to elseTarget 
+//  Not allowed to access non-public methods...   Fallback: check locally declared public methods only. 
+//  property access 
+//  Declared on a superclass?
+//  Start async before Read/WriteListener registration 
+//  TypeReference type which can't be used in Code attribute, or which is unknown. 
+//  clear thread callbacks to allow them to be gc'd 
+//  Nothing to do: XHR transports check if session is disconnected. 
+//  SPR-14952 
+//  Use properties editor to tokenize the hold string. 
+//  for all of them 
+/* 	 * Removes all headers provided via array of 'headerPatterns'. As the name suggests	 * the array may contain simple matching patterns for header names. Supported pattern	 * styles are: "xxx*", "*xxx", "*xxx*" and "xxx*yyy".	  */
+//  We will perform this validation... 
+//  This will work as the local resolver is set 
+//  The JDK does not contain default editors for number wrapper types! 
+// -------------------------------------------------------------------------   Implementation of the Spring SchedulingTaskExecutor interface  ------------------------------------------------------------------------- 
+//  Put an object with null property at the end of the sort result. 
+//  Has the singleton object implicitly appeared in the meantime ->   if yes, proceed with it since the exception indicates that state. 
+//  non existent indexer (wibble made up) 
+//  failed prior to fix for SPR-9453 
+//  SPR-7779 
+//  Let subclasses do whatever initialization they like. 
+//  Now safe to check "beforeSubscribed" flags, they won't change once in NO_DEMAND 
+//  UDP 
+//  Note: the MRU entry is moved to the tail when accessed. 
+//  Check inserts match 
+//  invoke a transactional method, causing the PlatformTransactionManager bean to be resolved. 
+//  Declared type variables to inspect?
+//  Jackson2CodecSupport ... 
+//  Sanity test that we can reflectively read annotations,   including Class attributes; if not -> fall back to ASM 
+//  no code valid, no default 
+//  Other functionality 
+//  RxJava 1 Single 
+// see https://download.oracle.com/javase/1.5.0/docs/api/java/lang/System.html#getenv(java.lang.String) 
+//  Found a matching TargetSource. 
+//  Cannot be evaluated, so can't be readable.
+//  no characters for var1   no characters for var1 
+//  Create the connector server now. 
+//  was **/myHandle 
+//  Fall back to class name as cache key, for backwards compatibility with custom callers. 
+//  Top-level bean: use plain class name with unique suffix if necessary. 
+//  Extracted value does not match already: try to convert it. 
+//  Check for match in ancestors -> positive 
+//  SPR-15331 
+//  Hibernate 5.0/5.1 getFlushMode() with FlushMode return type 
+//  first code valid 
+//  Shouldn't custom translate this - invalid class 
+//  Try to explicitly synchronize the EntityManager itself   with an ongoing JTA transaction, if any. 
+//  the element is a <description> -> ignore it 
+//  @@protoc_insertion_point(builder_scope:SecondMsg) 
+//  Multicast right now if possible - or lazily once the multicaster is initialized 
+//  SPR-14498 
+//  Now repeat with GET 
+//  Section 4.7.6 of the JVMS states "Every CONSTANT_Class_info entry in the constant_pool table   which represents a class or interface C that is not a package member must have exactly one   corresponding entry in the classes array". To avoid duplicates we keep track in the info   field of the Symbol of each CONSTANT_Class_info entry C whether an inner class entry has   already been added for C. If so, we store the index of this inner class entry (plus one) in 
+//  Add property values based on autowire by type if applicable. 
+//  General exception counter which is a total for all exceptions thrown 
+//  Determine default HTML escape setting from the "defaultHtmlEscape" 
+//  Shouldn't happen - probably a result of circular reference resolution... 
+//  Unmarshalling 
+//  evaluates to "Wireless communication" 
+//  Static factory method 
+//  RSocketStrategies and RSocketFactory configurers should have been called 
+//  RFC 6265 
+//  replace the request context with one containing the errors 
+//  The config classes that imported this one were all skipped, therefore we are skipped... 
+//  Inbound mapping 
+//  Just subscribe without requesting 
+//  but we should still find it on classes. 
+//  Continue with the possible next task element 
+//  ordered by priority - operands first 
+//  Failed to introspect target method, probably because it has been loaded   in a special ClassLoader. Let's try the declaring ClassLoader instead... 
+//  Fallback: target bean at least found by bean name. 
+//  SPRING PATCH END 
+//  SPR-13468 
+//  Note that we need an ApplicationContext, not just a BeanFactory,   for post-processing and hence auto-proxying to work. 
+//  ignore 
+//  Store the offset of 'signature_index', and the value of 'index' and 'start_pc'. 
+// -------------------------------------------------------------------------   Convenience finder methods for named queries  ------------------------------------------------------------------------- 
+//  Give up 
+//  Note: the following 'multi-line' layout is for enhanced code readability.                             
+//  Like Spring Security does in HttpServlet3RequestFactory.. 
+//  Otherwise, just ignore it and continue... 
+//  For subclasses: do nothing by default. 
+//  @CacheValue 
+//  Special case: If no required type specified, which usually only happens for   Collection elements, or required type is not assignable to registered type,   which usually only happens for generic properties of type Object -   then return PropertyEditor if not registered for Collection or array type.   (If not registered for Collection or array, it is assumed to be intended   for elements.) 
+//  Expose the form object name for nested tags... 
+//  See org.springframework.core.env.EnvironmentSystemIntegrationTests 
+//  testing some ????? behavior
+//  Ensure that the type variable (e.g., T) is declared directly on the method   itself (e.g., via <T>), not on the enclosing class or interface. 
+//  JiBX compiler is currently not compatible with JDK 9 
+//  trailing slash 
+//  test matching with ?'s and /'s 
+//  type references 
+//  SPR-14045 
+//  Lifecycle 
+// ---------------------------------------------------------------------   Convenient methods for registering individual beans  --------------------------------------------------------------------- 
+//  Try PE-based comparison (PE should *not* be allowed to escape creating thread) 
+//  - The offset of the NestMembers attribute, or 0. 
+//  quoted if dotted 
+//  We already validated the parameter above... 
+//  none of these sets are possible due to (expected) conversion problems 
+//  Act 
+//  Now fast-forward by 31 minutes 
+//  Revert to old position. 
+//  No '\v' in Java, use octal value for VT ascii char 
+//  compilerMode = SpelCompilerMode.MIXED 
+//  for backwards compatibility.. 
+//  If no server was provided then try to find one. This is useful in an environment   where there is already an MBeanServer loaded. 
+// -------------------------------------------------------------------------   Inner classes used as internal adapters  ------------------------------------------------------------------------- 
+//  Avoid creation of target Connection on pre-close cleanup (e.g. Hibernate Session) 
+//  Release Connection on suspend if the application doesn't keep   a handle to it anymore. We will fetch a fresh Connection if the   application accesses the ConnectionHolder again after resume,   assuming that it will participate in the same transaction. 
+//  Empty context path (root context) should not match to a URL with a context path 
+//  Add an introduction that implements only the methods on ScopedObject. 
+//  If a nested property cannot be read, simply return null   (similar to JSTL EL). If the property doesn't exist in the   first place, let the exception through. 
+//  Physically remove and close leaf nodes first (i.e., on the way back up the 
+//  No synchronization necessary... 
+//  comparator = new PatternComparatorConsideringPath("/hotels/new.html");   paths.add(pp.parse("/hotels/new.*"));   paths.add(pp.parse("/hotels/{hotel}"));   Collections.shuffle(paths);   Collections.sort(paths, comparator); 
+//  Using nested <form:option/> tags, so just expose the value in the PageContext... 
+//  Access int array 
+//  Expose remaining arguments as vararg array for last parameter 
+//  We only need this to wrap ByteBufs 
+//  Only String-based MultiValueMap 
+//  setting values 
+//  Instance state 
+//  top-level empty variable scope 
+//  then convert it here 
+//  Queue gets created in order to create MessageConsumer for that Destination... 
+//  SPR-10785: set callbacks directly on the instance instead of in the   enhanced class (via the Enhancer) in order to avoid memory leaks. 
+/*  L3B  */
+//  SPR-16773 
+//  Call coming in through InfrastructureProxy interface... 
+//  SPR-16884 
+//  Ensure internal list is mutable. 
+//  SPR-11649 
+//  Definitely doesn't match: throw IllegalArgumentException/IllegalStateException 
+//  needs The Sundays compiler; must NOT throw any exception here... 
+//  SPR-15900 
+//  basic 
+//  In case of FactoryBean, try to match FactoryBean instance itself next. 
+//  The BootstrapMethods attribute is read in the constructor. 
+//  which might give an indication on the desired target type. 
+//  Make sure bean class is actually resolved at this point, and   clone the bean definition in case of a dynamically resolved Class   which cannot be stored in the shared merged bean definition. 
+//  static method, one parameter of primitive type 
+//  probably a streaming request - let's simply ignore it 
+//  Visit the RuntimeInvisibleAnnotations attribute. 
+//  ConstructorReference 
+//  target type is declared as raw enum, treat the trimmed value as <enum.fqn>.FIELD_NAME 
+//  Comparison by date uses HttpHeaders to format the date in the error message. 
+//  2) Fall back to an implicit database name based on the ID 
+//  We should set a specific isolation level but are not allowed to... 
+//  register and start immediately 
+//  Else, compare the inner classes entry nameSymbol.info - 1 with the arguments of this method   and throw an exception if there is a difference? 
+//  reply (no listener for 4L) 
+//  SPR-16108 
+//  Not running in an ApplicationContext -> register tasks early... 
+//  Prepare taskExecutor and maxMessagesPerTask. 
+//  RowSet navigation methods 
+//  SPR-16103 
+//  Proceed with standard resource location parsing. 
+//  If we have nested annotations, we need them as nested maps 
+//  Kotlin module 
+//  Null model arguments added without a name being explicitly supplied are not allowed 
+//  These are only checked for current Ctx (not parent ctx) 
+//  Check if all puts have been excluded by condition 
+//  delegation 
+//  Private methods for use from State's... 
+//  ----------------------------------------------------------------------------------------------   Methods to parse stack map frames   ---------------------------------------------------------------------------------------------- 
+//  and the path data has run out too 
+//  Treat it like a property 
+//  Add argument resolver before parent initializes argument resolution 
+//  In contrast to nested test classes running in JUnit 4, the foo   field in the outer instance should have been injected from the   test ApplicationContext for the outer instance. 
+//  The child ClassLoader used to load the compiled expression classes 
+//  Unknown Number subtype -> best guess is double increment 
+//  Search for TaskExecutor bean... not plain Executor since that would   match with ScheduledExecutorService as well, which is unusable for   our purposes here. TaskExecutor is more clearly designed for it. 
+//  A custom TypeConverter which does not support TypeDescriptor resolution... 
+//  Release Connection early, to avoid potential connection pool deadlock   in the case when the exception translator hasn't been initialized yet. 
+//  Reset all bean definitions that have the given bean as parent (recursively). 
+//  Return unmodifiable snapshot, to avoid ConcurrentModificationExceptions   while iterating and invoking synchronization callbacks that in turn   might register further synchronizations. 
+//  Empty holder representing "not valid". 
+//  SPR-13111 
+//  Parameters used for optimization choices... 
+//  string concatenation 
+//  Rely on default serialization, although this class itself doesn't carry state anyway... 
+//  SPR-16138 
+//  Create proxy here if we have a custom TargetSource.   Suppresses unnecessary default instantiation of the target bean:   The TargetSource will handle target instances in a custom fashion. 
+//  - The offset of the AnnotationDefault attribute, or 0. 
+//  no ConcurrentModificationException 
+//  add new 
+//  ALSO CHECK CHAIN of SQLExceptions!?   also allow chain of translators? default if can't do specific?
+//  Calling foo(String) with (String) is exact match 
+//  same for BLOB 
+//  In between are the constructor args 
+//  The meta-annotation should have been loaded by the parent 
+//  TODO: test with expression for ServerWebExchange 
+//  Create local SchedulerFactory instance (typically a StdSchedulerFactory) 
+//  Do not initialize FactoryBeans here: We need to leave all regular beans   uninitialized to let the auto-proxy creator apply to them! 
+//  Name of schema for this context 
+//  No other properties specified: check bean name. 
+//  No shutdown hook registered yet. 
+//  empty params 
+//  empty path 
+//  Just to test ASM5's bytecode parsing of INVOKESPECIAL/STATIC on interfaces 
+//  bean name will cause AccessException 
+//  Do not check the expected position due a change in RegEx parsing in JDK 13.   See https://github.com/spring-projects/spring-framework/issues/23669 
+//  Not found in parent either. 
+//  (2) Or register an accessor that can understand 'p' and return the right person 
+//  We're all set... find the unbound parameter, and bind it. 
+//  They are reusable 
+//  SPR-17461 
+//  Serialization methods 
+//  In the first case we should not retry, in the second case we should see   if there is a better suited method. 
+//  Check its unchanged 
+//  but all params are available 
+//  SPR-14410 
+//  on Servlet 4.0 
+//  @since 4.2 
+//  placeholders nested within the value of "p4" are unresolvable and cause an 
+//  Fetch RMI registry to expose. 
+//  a class path resource pattern 
+//  SPR-17168 
+//  This case should happen only once, for the visitLabel call in the constructor. Indeed, if   compute is equal to COMPUTE_INSERTED_FRAMES, currentBasicBlock stays unchanged. 
+//  Adding a new property accessor just for a particular type 
+//  Fallback: target bean at least found by bean name - probably a manually registered singleton. 
+//  = 5 invocations, as reentrant call to spouse is advised also 
+//  Passing (Integer,String) on call to (Integer,String[]) is exact match 
+//  Note: fields are ordered as in the field_info structure, and those related to attributes are   ordered as in Section 4.7 of the JVMS. 
+//  Test OK 
+//  Adding a 2nd Cookie should result in 2 Cookies. 
+//  Do not create the node if it does not exist... 
+//  SPR-13453 
+//  Call each validator with the same binding result 
+// Get the key 
+//  skip to flight 
+//  there a couple of mappings defined with which we can test the   path matching, let's do that... 
+//  changing target 
+// ---------------------------------------------------------------------   ServletResponse properties  --------------------------------------------------------------------- 
+//  Simply return the configured ScriptEngine... 
+//  Array-based vars rely on the below order.. 
+//  Spring bean names are less restrictive compared to AspectJ names (methods, types etc.)   MVC Controller-kind 
+//  Convert remaining arguments to the varargs element type 
+//  should not be called, since we return false for canRead(Class)
+//  java.net.HttpURLConnection returns a *; q=.2 Accept header 
+//  Just optional - for getting a specifically configured TypeConverter if needed.   We'll simply fall back to a SimpleTypeConverter if no specific one available. 
+//  /{*foobar} is at the start 
+//  In case of FactoryBean, try to match FactoryBean itself next. 
+//  Note: not actually invoked within a transaction since the test class is   annotated with @MetaTxWithOverride(propagation = NOT_SUPPORTED) 
+//  All other tests are in superclass. 
+//  Exceed send time.. 
+//  IllegalStateException from sharing the underlying JDBC Connection   which typically gets committed first, e.g. with Oracle AQ --> ignore 
+//  Access float array 
+//  SPR-15384 
+//  Filter out BeanPostProcessors that are part of the AOP infrastructure, 
+//  https://docs.oracle.com/javase/specs/jvms/se9/html/jvms-4.html#jvms-4.7.16.1 
+//  Create JDBCConnectionSpec using current isolation level value and read-only flag. 
+//  Return the scoped proxy definition as primary bean definition 
+//  up to last '**' 
+//  Leave stack trace for later, if error is not handled... 

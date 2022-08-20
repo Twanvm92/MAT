@@ -1,0 +1,75 @@
+@relation 'technicalDebt'
+
+@attribute Text string
+@attribute class-att {negative,positive}
+
+@data
+
+'given class with nonvoid returning setter method ',negative
+'destination argument being null for producer ',negative
+'same ',negative
+'instance bean methods within configuration classes must overridable accommodate cglib ',negative
+'nonjavadoc see ',negative
+'close and stop the listeners ',negative
+'single resource with the given name ',negative
+'recurse ',negative
+'try various advice types ',negative
+'instruction successor the current block and start new basic block ',negative
+'verifying that after number compilations the classloaders used load the compiled expressions are discardedreplaced see ',negative
+'update response ',negative
+'now fastforward minutes ',negative
+'add user local registry ',negative
+'reretrieve the array from the synthesized annotation ',negative
+'see spr ',negative
+'skip ',negative
+'useful for profiling take snapshots systeminread ',negative
+'spr ',negative
+'not necessary cast the target bridge have the same return type this conveniently includes void and primitive types which would fail casted its not possible covariant from boxed unbox vice versa having boxunbox for bridges todo also isnt necessary checkcast the return assignable from the target this would happen subclass used covariant returns narrow the return type within bridge ',negative
+'against the lockable interface introduced the specific advisor ',negative
+'spr ',negative
+'verify the result ',negative
+'the default same value pubsubdomain ',negative
+'note the two datasource instances are not the same ',negative
+'skip the index field bytes ',negative
+'fetch uowmanager handle from jndi necessary ',negative
+'last comment not closed properly ',negative
+'physically close durable subscribers time session close call ',negative
+'spr ',negative
+'the test class annotated with testconstructor ',negative
+'use and bytes respectively ',negative
+'may null ',negative
+'common cases ',negative
+'publish shutdown event ',negative
+'verifying ',negative
+'simply proceed equivalent superclass constructor found ',negative
+'spr spr ',negative
+'offsetdelta rule all cases ',negative
+'check see mbeanserver registered ',negative
+'check nested map list ',negative
+'specific theme indicated need fallback the default ',negative
+'spr ',negative
+'get here otherproxy the other aopproxy ',negative
+'have been able determine the arg names ',negative
+'invoke method target connection ',negative
+'dosuspend failed original transaction still active ',negative
+'jdk dynamic proxy ',negative
+'contributed configforscanning ',negative
+'save the first exception but invoke all interceptors ',negative
+'try connect using client ',negative
+'whether the stack map frames are compressed stackmaptable not ',negative
+'constants manipulate the dim field abstract type ',negative
+'nothing below trace ',negative
+'ignore see spr ',negative
+'multicast right now possible lazily once the multicaster initialized ',negative
+'convenience methods for sending messages and receiving the reply from destination ',negative
+'match all elements the first ',negative
+'unless was invalidated ',negative
+'proceed physical close from here ',negative
+'now msg better expected ',negative
+'and wont think its equal nopinterceptor ',negative
+'something nice for arrays ',negative
+'would nice partially match path and get any bound variables one step ',positive
+'need lifecycle methods ',negative
+'spr spr ',negative
+'start the most recent path element particular path element ',negative
+'fires context checks ',negative
