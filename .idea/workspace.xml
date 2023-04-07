@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6dbb022e-2610-487b-b71d-d9650e6a4b7a" name="Changes" comment="">
+    <list default="true" id="696c51f2-5660-416f-810c-004b56d21cd6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/google-java-format.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/google-java-format.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KE_data_prep.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/KE_data_prep.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MAT/main/Settings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MAT/main/Settings.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result_seminar_mto_matMTO_MAT/Evaluation.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result_seminar_mto_matMTO_MAT/result--SpringFramework.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/methods/Mat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/methods/Mat.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,20 +26,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "//wsl$/Ubuntu-20.04/home/twan/projects/MAT"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu-20.04/home/twan/projects/MAT&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="main.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="MAT" />
-      <option name="PROGRAM_PARAMETERS" value="-p ./exp_data/ -o ./result_seminar_mto_mat -m MAT -s MTO" />
+      <option name="PROGRAM_PARAMETERS" value="-p ./exp_data/ -o ./result_seminar -m MAT -s MTO" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="main.*" />
@@ -47,14 +52,14 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.main.Main" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6dbb022e-2610-487b-b71d-d9650e6a4b7a" name="Changes" comment="" />
+      <changelist id="696c51f2-5660-416f-810c-004b56d21cd6" name="Changes" comment="" />
       <created>1660144823481</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />

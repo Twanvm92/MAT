@@ -20,27 +20,27 @@ public class Settings {
 
     public static String[] projectNames = {
 
-//            "Ant",
-//            "ArgoUML",
-//            "Columba",
-//            "EMF",
-//            "Hibernate",
-//            "JEdit",
-//            "JFreeChart",
-//            "JMeter",
-//            "JRuby",
-//            "SQuirrel",
-//
-//            "Dubbo",
-//            "Gradle",
-//            "Groovy",
-//            "Hive",
-//            "Maven",
-//            "Poi",
+            "Ant",
+            "ArgoUML",
+            "Columba",
+            "EMF",
+            "Hibernate",
+            "JEdit",
+            "JFreeChart",
+            "JMeter",
+            "JRuby",
+            "SQuirrel",
+
+            "Dubbo",
+            "Gradle",
+            "Groovy",
+            "Hive",
+            "Maven",
+            "Poi",
             "SpringFramework",
-//            "Storm",
-//            "Tomcat",
-//            "Zookeeper", // */
+            "Storm",
+            "Tomcat",
+            "Zookeeper"
     };
 
 
