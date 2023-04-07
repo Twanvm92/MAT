@@ -241,4 +241,8 @@ cython_debug/
 #.idea/
 
 # PILOT data files
-PILOT_Code/**/datasets-input-neural-network/**/original/*
+PILOT_Code/**/original/*
+PILOT_Code/**/extensive/*
+
+# PILOT venv
+PILOT_Code/pilot/
